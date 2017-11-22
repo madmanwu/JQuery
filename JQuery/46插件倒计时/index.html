@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>倒计时插件</h2>
+    <h2>距端午倒计时</h2>
+    <div class="box"></div>
+    <h2>距国庆倒计时</h2>
+    <div class="box2"></div>
+</body>
+<script src="jquery1.7.js"></script>
+<script src="countDown.js"></script> 
+<script>
+    $.countDown({
+        year:2017,
+        month:5,
+        day:30,
+        hour:12,
+        minute:5,
+        render:$('.box')
+    });
+    $.countDown({
+        render:$('.box2')
+    });
+    
+</script>
+</html>

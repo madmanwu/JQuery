@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	#list{width:600px;height:200px;margin:30px auto;}
+	#list li{width:200px;height:200px;float:left;}
+	#list li img{width:200px;height:200px;}
+	</style>
+</head>
+<body>
+	<ul id="list">
+		<li><img src="img/temp_img01.jpg" alt=""></li>
+		<li><img src="img/temp_img08.jpg" alt=""></li>
+		<li><img src="img/temp_img13.jpg" alt=""></li>
+	</ul>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){
+			
+			$("#list li").hover(function(e){
+				var src=$(this).children("img").attr("src")
+				window.newDiv=$("<div><img src="+src+"></div>")
+				newDiv.appendTo("body")
+				newDiv.css({"position":"absolute","left":e.pageX,"top":e.pageY})
+				
+			},function(){
+				newDiv.remove()
+			})
+		})
+	</script>
+</body>
+</html>

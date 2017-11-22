@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding: 0;list-style: none;text-decoration: none;}
+        .hotlist li {
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            width: 32%; 
+            text-align: center;
+            color: #333;
+        }
+        .hothh{
+            height: 24px;
+            line-height: 24px;
+            width: 100%;
+            padding-left: 15px;
+            font-size: 18px;
+            color: #8a9399;
+            border: 1px solid #e5e5e5;
+        }
+        .morelist li{
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            width: 10%;
+            text-align: center;
+        }
+        .morelist li a{
+            color: #333;
+        }
+        .citylist h3{
+            height: 24px;
+            line-height: 24px;
+            width: 100%;
+            padding-left: 15px;
+            background: #EBEBEB;
+            color: #8a9399;
+            border: 1px solid #e5e5e5;
+            clear: both;
+        }
+        .citylist h3 a{
+            float: right;
+           line-height: 24px;
+           padding-right: 30px;
+           color: #333;
+           cursor: pointer;
+        }
+        .citylist ul li{
+            height: 45px;
+            line-height: 45px;
+            color: #333;
+            padding-left: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+  <a href="#box">点击我</a>
+   <div class="wrap">
+       <h3 class="hothh">热门</h3>
+       <ul class="hotlist">
+           
+       </ul>
+      <h3 class="hothh">更多</h3>
+      <ul class="morelist">
+          
+      </ul>
+      <div class="citylist">
+
+
+          
+      </div>
+
+   </div>
+
+
+   <div class="header"></div>
+  <ul class="nav"></ul>
+  <nav></nav>
+
+   <header></header> 
+    
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/city.js"></script>
+    <script>
+
+
+       $(document).ready(function(){
+
+           function  randerhot(){
+            var  lis="";
+             $.each(city,function(i,val){
+                lis+="<li>"+val+"</li>";
+             });
+             $(".hotlist").html(lis);
+           }
+           randerhot();
+
+           var  arr=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+           function randermore(){
+              var  lis="";
+              $.each(arr,function(i,val){
+                  lis+="<li><a href='#title"+i+"'>"+val+"</a></li>";
+              });
+              $(".morelist").html(lis);
+           }
+
+           randermore();
+
+           function citylist(){
+              var  div,inner="";
+              for(var i in arr){
+                  var word=arr[i];
+                  div=$("<div></div>");
+                  div.attr("id","title"+i);
+                  inner="<h3>"+word+"<a class='return'>返回顶部</a></h3><ul></ul>";
+                  div.html(inner);
+                  div.appendTo(".citylist");
+                  var  lis="";
+                  $.each(CITIES,function(key,arr){
+                     if(arr[1].charAt(0)==word){
+                      lis+="<li>"+arr[0]+"</li>";
+                     }
+                  });
+
+                  $(".citylist div").eq(i).children("ul").html(lis);
+              }
+           }
+           citylist();
+
+
+           $(".citylist").on("click",".return",function(){
+              $("body").stop().animate({"scrollTop":0},600);
+           });
+
+       });
+       
+    </script>
+</body>
+</html>

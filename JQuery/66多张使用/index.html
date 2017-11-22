@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		ul,li{
+			list-style: none;
+		}
+		.wrap_one{
+			width:800px;
+			height:200px;
+			margin:0 auto;
+			position: relative;
+		}
+		.box{
+			width:568px;
+			height:164px;
+			margin:18px auto;
+			overflow: hidden;
+		}
+		.list li{
+			float: left;
+			margin:0 5px;
+		}
+		span{
+			position: absolute;
+			top:83px;
+		}
+		.list,.list_one{
+			width:1152px;
+		}
+		.left{
+			left:50px;
+		}
+		.right{
+			right:50px;
+		}
+		.wrap_two{
+			width:800px;
+			height:200px;
+			margin:0 auto;
+			position: relative;
+			margin-top: 50px;
+		}
+		.list_one li{
+			float: left;
+			margin:0 5px;
+		}
+		.left_one{
+			left:50px;
+		}
+		.right_one{
+			right:50px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- 盒子一 -->
+	<div class="wrap_one">
+		<div class="box">
+			<ul class="list">
+				<li><img src="images/imgs.png" alt=""></li>
+				<li><img src="images/imgs2.png" alt=""></li>
+				<li><img src="images/imgs3.png" alt=""></li>
+				<li><img src="images/imgs4.png" alt=""></li>
+				<li><img src="images/imgs.png" alt=""></li>
+				<li><img src="images/imgs2.png" alt=""></li>
+				<li><img src="images/imgs3.png" alt=""></li>
+				<li><img src="images/imgs4.png" alt=""></li>
+			</ul>
+			
+		</div>
+		<span class="left"><img src="images/arrow_l.gif" alt=""></span>
+		<span class="right"><img src="images/arrow_r.gif" alt=""></span>
+	</div>
+
+	<!-- 盒子二 -->
+	<div class="wrap_two">
+		<div class="box">
+			<ul class="list_one">
+				<li><img src="images/imgs.png" alt=""></li>
+				<li><img src="images/imgs2.png" alt=""></li>
+				<li><img src="images/imgs3.png" alt=""></li>
+				<li><img src="images/imgs4.png" alt=""></li>
+				<li><img src="images/imgs.png" alt=""></li>
+				<li><img src="images/imgs2.png" alt=""></li>
+				<li><img src="images/imgs3.png" alt=""></li>
+				<li><img src="images/imgs4.png" alt=""></li>
+			</ul>
+			
+		</div>
+		<span class="left_one"><img src="images/arrow_l.gif" alt=""></span>
+		<span class="right_one"><img src="images/arrow_r.gif" alt=""></span>
+	</div>
+	<script src='js/jquery-1.11.3.js'></script>
+	<script src='js/jQuery.lunbo.js'></script>
+	<script>
+		$('.wrap_one').lunbo({
+			count:2,
+			autoplay:true,
+		})
+		$('.wrap_two').lunbo({
+			count:1,
+			autoplay:false,
+			target:'.list_one',
+			btn:['.left_one','.right_one'],
+			type:'mouseover'
+		})
+	</script>
+</body>
+</html>

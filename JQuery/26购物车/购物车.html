@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding: 0;margin:0;}
+		.wrap{width:1000px;margin:0 auto;}
+		h2{height:50px;background:#eee;line-height: 50px;padding: 0 20px;width:960px;}
+		h2 span{float: right;font-size: 16px;font-weight: 600;}
+		#main dl{width:100%;clear:both;}
+		#main dl dt{width:250px;height:145px;float: left;margin-right:20px; }
+		#main dl dd{width:670px;float: left;padding: 0 30px;}
+		#main dl dd h3,#main dl dd p,#main dl dd h4{height:30px;line-height: 30px;}
+		#main dl dd h3 span,#main dl dd p span{float: right;font-size: 14px;font-weight: 500;}
+		#main dl dd p span input{width:20px;}
+		#main dl dd p span button{width:20px;height:20px;}
+		#main dl dd h4 b{background: url("imgs/3.jpg");float: right;width:96px;height:30px;text-align: center;line-height: 30px;font-size: 14px;color:#fff;}
+		footer{width:1000px;height:40px;border: 2px solid #333;clear:both;line-height: 40px;}
+		footer button{width:98px;height:30px;background: url("imgs/3.jpg");float: right;margin-top: 5px;}
+		footer b input{width:40px;}
+	</style>
+</head>
+<body>
+	<div class='wrap'>
+		<h2><span>购物车</span>产品清单</h2>
+		<div id='main'>
+			<dl>
+				<dt><img src="imgs/4.jpg"></dt>
+				<dd>
+					<h3><span date="p">单价:￥360</span>成功管理者</h3>
+					<p><span>数量:<button class='jian'>-</button><input type="text" value='1'><button class='add'>+</button></span>￥1200</p>
+					<h4><b>购物车</b>赠《穿布鞋的马云》一本，年终送给管理者的福利</h4>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="imgs/5.jpg"></dt>
+				<dd>
+					<h3><span date="p">单价:￥198</span>成功管理者</h3>
+					<p><span>数量:<button class='jian'>-</button><input type="text" value='1'><button class='add'>+</button></span>￥1200</p>
+					<h4><b>购物车</b>赠《穿布鞋的马云》一本，年终送给管理者的福利</h4>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="imgs/4.jpg"></dt>
+				<dd>
+					<h3><span date="p">单价:￥200</span>成功管理者</h3>
+					<p><span>数量:<button class='jian'>-</button><input type="text" value='1'><button class='add'>+</button></span>￥1200</p>
+					<h4><b>购物车</b>赠《穿布鞋的马云》一本，年终送给管理者的福利</h4>
+				</dd>
+			</dl>					
+		</div>
+		<footer>
+			<button id='btn'>结算</button><b>您已准备学习<input type="text" value='3' id='num'>课,学习总计<span>￥<input type="text" value='758' id='p'></span></b>
+		</footer>
+	</div>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){
+			$(".add").on("click",function(){
+				var num=$(this).prev().val()
+				num++
+				if(num>10)return;
+				$(this).prev().val(num)
+				money()
+			})
+			$(".jian").on("click",function(){
+				var num=$(this).next().val()
+				num--
+				if(num<1){
+					if(confirm("你确定要删除吗")){
+						$(this).parents("dl").remove()
+						subject()
+						money()
+					}else{
+						return
+					}
+				}
+				$(this).next().val(num)
+				money()
+			})
+			function subject(){
+				var len=$("#main dl").length
+				$("#num").val(len)
+			}
+			function money(){
+				var sum=0;
+				$("#main dd").each(function(){
+					//alert(11)
+					var qian=$(this).find("span[date=p]").text().slice(4)
+					//window.sum=parseInt($("#p").val())
+					var num=$(this).find("input[type=text]").val()*1
+					sum+=qian*num
+				})
+				$("#p").val(sum)
+			}
+		})
+	</script>
+</body>
+</html>

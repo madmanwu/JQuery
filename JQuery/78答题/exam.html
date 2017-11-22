@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		#firstbox{
+			margin: 20px auto;
+			width: 600px;
+			height: 150px; 
+			border:1px solid #ccc;
+			text-align: center;
+			border-radius: 5px;
+		}
+		#firstbox h3{
+			line-height: 70px;
+		}
+		#firstbox button{
+			width: 130px;
+			height: 40px;
+			background: green;
+			color: #fff;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		.box{
+			margin: 20px auto;
+			width: 600px;
+			height: 230px;
+			border:1px solid #ccc;
+			position: relative;
+		}
+		.box h3{
+			margin:15px 100px;
+		}
+		.box p{
+			width: 380px;
+			height: 20px;
+			background: #ccc;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			margin-left: 100px;
+			padding-left: 20px;
+		}
+		.box p.bg{
+			background: #0ff;
+		}
+		.box span{
+			position: absolute;
+			top:10px;
+			right:20px;
+			width: 40px;
+			height: 20px;
+			text-align: center;
+			border:1px solid #ccc;
+			border-radius: 5px;
+			background: #ccc;
+		}
+		.box button{
+			width: 100px;
+			height: 20px;
+			border-radius: 2px;
+			position: absolute;
+			top:190px;
+			right:100px;
+			background: green;
+		}
+		.box .prev{
+			left: 100px;
+			background: #0ff;
+		}
+		.box span.sp{
+			width: 60px;
+		}
+		#lastbox b{
+			width: 50px;
+			height: 30px;
+			border: 1px solid #ccc;
+			margin-left: 70px;
+			line-height: 30px;
+			text-align: center;
+			float: left;
+			margin-top: 70px;
+		}
+		.box .end{
+			text-align: center;
+			margin-top:50px;
+		}
+		#lastbox b.green{
+			background: green;
+		}
+		#lastbox b.red{
+			background: red;
+		}
+		.next{
+			display: none;
+		}
+		.movemsg{
+			position: absolute;
+			padding:15px 20px;
+			border:solid 1px #000;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+    <form action="tt.html">
+    		<input type="submit" value="提交">
+
+    </form>
+	<div id="firstbox">
+		<h3>请认真完成测试题。准备好了吗？</h3>
+		<button id="starBtn" type="button">start→</button>
+	</div>
+	<div class="box">
+		<span>1/4</span>
+		<div>
+		    <h3>jQuery是什么？</h3>
+			<p>JavaScript库</p>
+			<p>CSS库</p>
+			<p>PHP框架</p>
+			<p>以上都不是</p>
+		</div>
+		<button class='next' type="button">下一题</button>
+	</div>
+	<div class="box">
+		<span>2/4</span>
+		<div>
+			<h3>找出不同类的一项</h3>
+			<p>写字台</p>
+			<p>沙发</p>
+			<p>电视</p>
+			<p>桌布</p>
+		</div>
+		<button class="prev">上一题</button>
+		<button class='next' type="button">下一题</button>
+	</div>
+	<div class="box">
+		<span>3/4</span>
+		<div>
+			<h3>国土面积最大的国家是：</h3>
+			<p>美国</p>
+			<p>中国</p>
+			<p>俄罗斯</p>
+			<p>加拿大</p>
+		</div>
+		<button class="prev">上一题</button>
+		<button class='next' type="button">下一题</button>
+	</div>
+	<div class="box">
+		<span>4/4</span>
+		<div>
+			<h3>月球距离地球多远？</h3>
+			<p>18万公里</p>
+			<p>38万公里</p>
+			<p>100万公里</p>
+			<p>180万公里</p>
+		</div>
+		<button class="prev">上一题</button>
+		<button class='over' type="button">完成</button>
+	</div>
+	<div id="lastbox" class="box">
+		<span class="sp">已结束</span>
+		<h3 class='end'></h3>
+		<div class="curb">
+			<b>#1<em></em></b>
+			<b>#2<em></em></b>
+			<b>#3<em></em></b>
+			<b>#4<em></em></b> 
+		</div>
+	</div>
+<script src='js/jquery-1.8.3.min.js'></script>
+<script src='js/script.js'></script>
+</body>
+</html>

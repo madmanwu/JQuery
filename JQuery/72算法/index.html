@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var arr=[0,3,3,0,4,8,9,1,10,11];
+	//去重
+	// function qc(arr){
+	// 	var brr =[];
+	// 	for(var i=0;i<arr.length;i++){
+	// 		if(brr.indexOf(arr[i])==-1){
+	// 			brr.push(arr[i])
+	// 		}
+
+	// 	}
+	// 	return brr;
+	// }
+	// console.log(qc(arr))
+
+
+	//翻转
+	// function fz(arr){
+	// 	var brr=[],length=arr.length-1;
+	// 	for(var i=length;i>=0;i--){
+	// 		brr.push(arr[i])
+	// 	}
+	// 	return brr;
+	// }
+	// console.log(fz(arr))
+
+
+	//排序
+	// function px(arr){
+	// 	var temp=[];
+	// 	for(var i=0;i<arr.length;i++){
+	// 		for(var j=i+1;j<arr.length;j++){
+	// 			if(arr[i]>arr[j]){
+	// 				temp=arr[i];
+	// 				arr[i]=arr[j];
+	// 				arr[j]=temp
+	// 			}
+	// 		}
+	// 	}
+	// 	return arr
+	// }
+	// console.log(px(arr))
+
+
+	//一维转二维
+	function er(n){
+		var brr=[];
+		var arr=[0,3,3,0,4,8,9,1,10,11];
+		
+		for(var i=0;i<arr.length;i++){
+			arr=arr.slice(0,n)
+			brr.push(arr)
+		}
+		console.log(arr)
+		return brr
+	}
+	console.log(er(3))
+	</script>
+</body>
+</html>

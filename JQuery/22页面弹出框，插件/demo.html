@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .close{
+            display: block;
+            cursor: pointer;
+            height:30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            background: #FFF;
+            color: #f00;
+            border-radius: 50%;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">按钮1</button>
+    <button id="btn2">按钮2</button>
+    <button id="btn3">按钮3</button>
+</body>
+<script src="jquery1.7.js"></script>
+<script src="demo.js"></script>
+<script>
+    $("#btn1").dialog({
+        ismove:false,
+        w:300,
+        h:300,
+        bg:"#0ff",
+        cont:"第一个",
+        L:300,
+        T:50,
+        id:"box1"
+    })
+    $("#btn2").dialog({
+        ismove:true,
+        w:200,
+        h:200,
+        bg:"#0f0",
+        cont:"第二个",
+        L:500,
+        T:200,
+        id:"box2"
+    })
+    $("#btn3").dialog({
+        ismove:true,
+        w:300,
+        h:300,
+        bg:"#f0f",
+        cont:"第三个",
+        L:0,
+        T:50,
+        id:"box3"
+    })
+</script>
+</html>

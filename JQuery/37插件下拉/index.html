@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	#box{width:1000px;height:500px;border:1px solid #000;margin:100px auto;}
+	p{width:1000px;text-align: center;font-weight: bold;color:blue;font-size: 50px}
+	#tip{width:900px;height:50px;margin:30px 50px;}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<p>百 度</p>
+		<input type="text" id="tip">
+		<ul id="list"></ul>
+	</div>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="jquery.down.js"></script>
+	<script src="data.js"></script>
+	<script>
+		$(function(){
+			$("#tip").start({})
+		})
+	</script>
+</body>
+</html>

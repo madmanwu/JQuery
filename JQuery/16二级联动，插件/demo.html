@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        .box{
+			width:600px;
+			height:30px;
+			margin: 50px auto;
+		}
+		.box select{
+			width:280px;
+			height:30px;
+
+		}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <select name="" id="se1" value="请选择"></select>
+        <select name="" id="se2" value="请选择"></select>
+    </div>
+    <div class="box">
+        <select name="" id="brand1" value="请选择"></select>
+        <select name="" id="brand2" value="请选择"></select>
+    </div>
+</body>
+<script src="jquery1.7.js"></script>
+<script src='data.js'></script>
+
+<script>
+    $(function(){
+        var rel = {
+            init:function(){
+                this.bindEvent();
+            },
+            bindEvent:function(){
+                var arr = [];
+                $(datasrc.localArea).each(function(i,n){
+                    arr.push('<option>'+n.name+'<option>');
+                })
+                $('#se1').append(arr.join(" "));
+                
+                // change
+                $("#se1").on("change",function(){
+                    var str = "请选择";
+                    var th = $(this).val();
+                    $(datasrc.localArea).each(function(i,n){
+                        if(th == n.name){
+                            $(n.option).each(function(j,m){
+                                str += '<option>'+m.name+'<option>';
+                            })
+                            $("#se2").html(str);
+                        }
+                    })
+                })
+                var brr = [];
+                $(datasrc.ObjectType.option).each(function(i,n){
+                    brr.push('<option>'+n.text+'<option>')
+                })
+                $('#brand1').append(brr.join(' '));
+                
+                // change
+                $('#brand1').on('change',function(){
+					var str2 = '请选择',
+                        th=$(this).val();
+					$(datasrc.ObjectType.option).each(function(j,m){
+						if(th==m.text){
+							$.each(m.option,function(k,v){
+								str2+='<option>'+v.text+'</option>'
+							})
+							$('#brand2').html(str2)
+						}											
+					})  
+				})
+            }
+        }
+        rel.init();
+    })
+</script>
+</html>

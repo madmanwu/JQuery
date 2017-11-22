@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{margin:0;padding:0;}
+		.cal_box{
+			width:350px;
+			height:420px;
+			margin: 100px auto;
+			background: #ccc;
+		}
+		.cal_head{
+			display:flex;
+			justify-content:space-between;
+			padding:10px;
+			background: limegreen;
+			font-size: 20px;
+			color: #fff;
+		}
+		.cal_head b{
+			line-height: 50px;
+		}
+		span{
+			width:50px;
+			height:50px;
+			float:left;
+			text-align: center;
+			line-height: 50px;
+			cursor:pointer;
+		}
+		.cal_weeks{
+			background: grey;
+			color: #fff;
+		}
+		.cal_pass{
+			color:#696969;
+		}
+		.cal_next{
+			color:#696969;
+		}
+	</style>
+</head>
+<body>
+	<script src='jquery1.7.js'></script>
+	<script>
+		$(function(){
+			function Cal(opt){
+				this.init(opt)
+			}
+			Cal.prototype={
+				constructor:Cal,
+				init:function(opt){
+					this.date = new Date()
+					this.config=$.extend({
+						year:this.date.getFullYear(),
+						month:this.date.getMonth(),	
+						id:'Cal_'+new Date().getTime()
+					},opt)
+					this.days=[31,28,31,30,31,30,31,31,30,31,30,31];
+					this.weeks=['日','一','二','三','四','五','六'];
+					this.months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+					this.isYear(this.config.year)?this.days[1]=29:this.days[1]=28;
+					this.creat();
+					this.bindEvent();
+					that=this;
+				},
+				creat:function(){
+					var box = $('<div id="'+this.config.id+'" class="cal_box"></div>'),
+						arr=[];
+						arr.push('<p class="cal_head">');
+						arr.push('<span class="prev"><</span>');
+						arr.push('<b>'+this.months[this.config.month]+'&nbsp;'+this.config.year+'</b>')
+						arr.push('<span class="next">></span>');
+						arr.push('</p>');
+					$.each(this.weeks,function(i,n){
+						arr.push('<span class="cal_weeks">'+n+'</span>')
+					})
+					var firstDay=this.getFirst(this.config.year,this.config.month)
+//					console.log(firstDay)    3       本月第一天是星期三
+					
+					//获取上个月的天数
+					var lastDays = this.days[this.config.month-1]
+//					console.log(lastDays)    28   上个月28天
+					
+					//渲染上个月的日期
+					for(var i=lastDays-firstDay+1;i<=lastDays;i++){
+//						console.log(i)  i就是上个月遗留的天数
+						arr.push('<span class="cal_pass">'+i+'</span>')
+					}
+					
+					//渲染当前月的日期
+					var curDays=this.days[this.config.month]
+					for(var i=1;i<=curDays;i++){
+//						console.log(i)
+						arr.push('<span class="cal_cur">'+i+'</span>')
+					}
+					
+					
+					//获取下一月的日期
+//					console.log(42-curDays-firstDay)
+					for(var i=1;i<=42-curDays-firstDay;i++){
+						arr.push('<span class="cal_next">'+i+'</span>')
+					}
+					box.append(arr.join(' ')).appendTo('body');
+				},
+				//判断是否是闰年  返回布尔值
+				isYear:function(year){
+					return (year%4==0 && year%100!=0) || year%400==0
+				},
+				//获取传入的年月的第一天是周几
+				getFirst:function(year,month){
+					return new Date(year,month,1).getDay()
+				},
+				
+				bindEvent:function(){
+					$('body').delegate('.next','click',function(){
+						$('.cal_box').remove()
+						that.config.month++
+						if(that.config.month>that.months.length-1){
+							that.config.month=0;
+							that.config.year++		
+						}
+						console.log(that.config.month)
+						that.creat();						
+					})
+					
+					
+					$('body').delegate('.prev','click',function(){
+						$('.cal_box').remove()
+						that.config.month--
+						if(that.config.month<0){
+							that.config.month=that.months.length-1;
+							that.config.year--		
+						}
+						console.log(that.config.month)
+						that.creat();						
+					})
+				}
+				
+				
+			}
+					
+		new Cal();	
+			
+		})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+</body>
+</html>

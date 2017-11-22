@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	#box{width:300px;height:300px;border:1px dotted #ccc;margin:100px auto;}
+	#tip{width:200px;height:30px;margin:10px 50px;background: #ccc}
+	</style>
+</head>
+<body>
+<div id="box">
+	<input type="text" id="tip">
+	<ul id="list"></ul>
+</div>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="jquery.down.js"></script>
+	<script>
+		$(function(){
+			$("#tip").start({
+				arr:["张三","李四","王四","赵四","慕容石","天天"]
+			})
+		})
+	</script>
+</body>
+</html>

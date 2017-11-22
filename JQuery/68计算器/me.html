@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        body{
+            font:12px;
+        }
+        #calc{
+            position:absolute;
+            left:50%;
+            top:30%;
+            margin:-161px 0 0 -120px;
+            width:230px;
+            background-color:#C4D2E0;
+            padding:3px;
+        }
+        #display{
+            width:230px;
+            height:60px;
+            background-color:#808080;
+        }
+        #display #top, #display #bottom{
+            height:20px;
+            padding:0 5px;
+            text-align:right;
+            font:14px;
+        }
+        #display #top .countSize{
+            padding:0 5px;
+        }
+        #display #bottom{
+            height:40px;
+            font:bold 20px "Arial";
+        }
+        #buttons{
+            width:230px;
+            text-align:center;
+        }
+        #buttons input{
+            float:left;
+            display:block;
+            width:50px;
+            overflow:hidden;
+        }
+        #buttons #num{
+            float:left;
+            width:160px;
+            overflow:hidden;
+        }
+        #buttons #num input{
+            height:40px;
+            margin:3px 3px 0 0;
+        }
+        #buttons #math{
+            float:left;
+            width:70px;
+            overflow:hidden;
+        }
+        #buttons #math input{
+            width:70px;
+            height:32px;
+            margin:3px 0 0 0;
+        }
+        #buttons #math input#equal{
+            height:30px;
+        }
+        #num input{
+        background:url(img/f.jpg) no-repeat;
+        width:50px;
+        height:35px;
+        }
+        #math input {
+        background:url(img/f.jpg) no-repeat;
+        width:40px;
+        height:35px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calc" style="margin-top:20px">
+	<div id="display">
+		<div id="top">
+<!--           <span class="upNum">36</span>  
+   <span class="countSize">*</span>  -->   
+        </div>
+		<div id="bottom">0</div>
+	</div>
+	<div id="buttons">
+		<div id="num">
+			<input type="button" value="7" class="num" id="seven" />
+			<input type="button" value="8" class="num" id="eight" />
+			<input type="button" value="9" class="num" id="nine" />
+			<input type="button" value="4" class="num" id="four" />
+			<input type="button" value="5" class="num" id="five" />
+			<input type="button" value="6" class="num" id="six" />
+			<input type="button" value="1" class="num" id="one" />
+			<input type="button" value="2" class="num" id="two" />
+			<input type="button" value="3" class="num" id="three" />
+			<input type="button" value="C" class="clearDisplay" id="clearDisplay" />
+			<input type="button" value="0" class="num" id="zero" />
+			<input type="button" value="." class="num" id="point" />
+		</div>
+		<div id="math">
+			<input type="button" value="/" class="math" id="chu" />
+			<input type="button" value="*" class="math" id="cheng" />
+			<input type="button" value="-" class="math" id="jian" />    
+            <input type="button" value="+" class="math" id="jia" />
+			<input type="button" value="=" class="equal" id="equal" />
+		</div>
+	</div>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+    $(".num").on("click",function(){     //数字0-9 .
+        var val=$(this).val();      //获取点击那个元素的value值
+        var bot=$("#bottom").text();          
+        //console.log(val)
+        if(bot=="0"){      //初始bot值默认为0  会出现两种结果
+            if(val=="."){       //初始值为0前提下 点击值为. 就往后追加
+                $("#bottom").append(val)    //0.9
+            }else{      //否则就为替换
+                $("#bottom").text(val)      //9
+            }         
+        }//不为0时两种情况 小数   或者整数
+        else if(bot.indexOf(".")>-1){      //如果有小数点时 
+            if(val!="."){           //点击值不为小数点继续往后追加
+                $("#bottom").append(val)
+            }
+        }  //最后剩下整数  可以继续追加整数  也可以追加小数点(有小数点后返回第二步)
+        else{     
+            $("#bottom").append(val)    
+        }
+    }) 
+
+    $("#clearDisplay").on("click",function(){   //c清除
+        $("#bottom").text(0)        //设置初始值0
+        $("#top").empty()        //将top里值全部清除
+    })
+
+    $("#buttons").on("click",".math",function(){      //+ - * /
+        var ysf=$(this).val();      //获取每次点击时的value值
+        var nums=$("#bottom").text();       //bottom上显示的文本值
+                //点击第二次时
+        if($(".numone").text().length!=0 && $(".ysf").text().length!=0 && $("#bottom").text().length!=0){
+            var n1=$(".numone").text(),     //n1 第一个span里的值
+                n2=$("#bottom").text(),         //n2 bottom里的值  
+                fh=$(".ysf").text(),          //运算符 第二个span里的值
+                result=count[fh](n1,n2);            //调用下面对象进行运算
+                $(".numone").text(result)       //运算结果赋给第一个span
+                $(".ysf").text(ysf)         //这里第二个span里为再次点击时获取的那个运算符
+                $("#bottom").empty()                //下面清空
+
+        }else{      //点击第一次时  
+            $("#top").html("<span class='numone'>"+nums+"</span><span class='ysf'>"+ysf+"</span>")
+            $("#bottom").text("0");
+        }
+
+        
+
+    })
+
+    $("#equal").on("click",function(){      //=
+        if($(".numone").text().length!=0 && $(".ysf").text().length!=0 && $("#bottom").text().length!=0){
+            var n1=$(".numone").text(),     //n1 第一个span里的值
+                n2=$("#bottom").text(),         //n2 bottom里的值  
+                fh=$(".ysf").text(),          //运算符 第二个span里的值
+                result=count[fh](n1,n2);            //调用下面对象进行运算
+                $("#bottom").text(result)       //运算结果赋给bottom
+                $(".ysf").text("")         //span2清空
+                $(".numone").text("")                //span1清空
+
+        }
+    })
+
+
+    var count={
+        "+":function(n1,n2){return n1*1+n2*1},
+        "-":function(n1,n2){return n1-n2},
+        "*":function(n1,n2){return n1*n2},
+        "/":function(n1,n2){return n1/n2}
+    }
+
+
+})
+</script>
+</body>
+</html>

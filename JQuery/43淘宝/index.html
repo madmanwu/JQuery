@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	body{position: relative;}
+	.box{width:600px;height:130px;border:1px solid #000;margin:0 auto;position: relative;}
+	.box ul{width:600px;height:80px;display:flex;border-bottom: 1px solid #000}
+	.box ul li{flex:1;}
+	.box ul li img{width:60px;height:60px;}
+	.box ul li:nth-child(5) input{width:50px;height:30px;text-align: center;line-height: 30px}
+	.box div{position: absolute;right:0;bottom:10px;}
+	.box ul li:nth-child(4){position: relative;}
+	.box ul li:nth-child(4) .mark{width:100px;height:100px;border:1px solid red;position: absolute;left:0;top:40px;display:none}
+	.move{width:200px;height:200px;background:pink;position: absolute;left:0;top:0;}
+	.move p{font-size: 20px}
+	.move button{width:80px;height:40px;border-radius: 5px;background:red;color:#fff;text-align: center;line-height: 40px;margin:20px 5px;}
+	.add,.del{cursor: pointer;}
+	</style> 
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li><input type="checkbox"></li>
+			<li><img src="9.jpg" alt=""></li>
+			<li><p>公主系列电水壶</p></li>
+			<li>
+				<span class="p">￥89.00</span>
+				<p>更多促销<b>V</b></p>
+				<div class="mark"></div>
+			</li>
+			<li>
+				<span class="add">-</span>
+				<input type="text" value="1">
+				<span class="del">+</span>
+			</li>
+			<li><p>￥89.00</p><p>1.24kg</p></li>
+		</ul>
+		<div><p>￥178</p><p>减:￥26.7</p></div>
+	</div>
+	<div class="box">
+		<ul>
+			<li><input type="checkbox"></li>
+			<li><img src="9.jpg" alt=""></li>
+			<li><p>公主系列电水壶</p></li>
+			<li>
+				<span class="p">￥89.00</span>
+				<p>更多促销<b>V</b></p>
+				<div class="mark"></div>
+			</li>
+			<li>
+				<span class="add">-</span>
+				<input type="text" value="1">
+				<span class="del">+</span>
+			</li>
+			<li><p>￥89.00</p><p>1.24kg</p></li>
+		</ul>
+		<div><p>￥178</p><p>减:￥26.7</p></div>
+	</div>
+	<div class="box">
+		<ul>
+			<li><input type="checkbox"></li>
+			<li><img src="9.jpg" alt=""></li>
+			<li><p>公主系列电水壶</p></li>
+			<li>
+				<span class="p">￥178</span>
+				<p>更多促销<b>V</b></p>
+				<div class="mark"></div>
+			</li>
+			<li>
+				<span class="add">-</span>
+				<input type="text" value="1">
+				<span class="del">+</span>
+			</li>
+			<li><p>￥178</p><p>2.48kg</p></li>
+		</ul>
+		<div><p>￥178</p><p>减:￥26.7</p></div>
+	</div>
+	<div class="sum">已选<span id="shop">3</span>件商品 总价￥<span id="price">356</span> 已节省￥<span id="save">0</span></div>
+	<button id="money">结算</button>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="jquery.js"></script>
+	<script>
+		$(function(){
+			$(".del").click(function(){
+				var vals=$(this).prev().val()
+				vals++;
+				$(this).prev().val(vals)
+				Num()
+				money()
+				youhui()
+			})
+			$(".add").click(function(){
+				var vals=$(this).next().val()
+				vals--;
+				if(vals<1)return;
+				$(this).next().val(vals)
+				Num()
+				money()
+				youhui()
+			})
+			function Num(){
+				var str=0;
+				$(".box").each(function(){
+					str+=$(this).find("input[type=text]").val()*1
+				})
+				$("#shop").text(str)
+			}
+			function money(){
+				var zong=0,
+					num=0,
+					dan=0;
+				$(".p").each(function(){
+					
+					if(num>=2){
+						dan=$(this).text().slice(1)*1-26
+						num=$(this).parent().next().find("input[type=text]").val()*1
+						zong+=dan*num
+					}else{
+						dan=$(this).text().slice(1)*1
+						num=$(this).parent().next().find("input[type=text]").val()*1
+						zong+=dan*num
+					}
+				})
+				$("#price").text(zong)
+			}
+			function youhui(){
+				var he=0
+				$(".p").each(function(){
+					var num=parseInt($(this).parent().next().find("input[type=text]").val());
+					if(num>=2){
+						he+=26*(num-1)
+					}else{
+						var dan=0
+						he+=dan*num
+					}
+				})
+				$("#save").text(he)
+			}
+			$("#money").on("click",function(){
+				if($(".box input:checked").length==0){
+					var newDiv=$("<div class='move'></div>"),
+					str=$("<p>"+"你确定要退出吗"+"</p><button id='sure'>"+"确定"+"</button><button id='mohu'>"+"取消"+"</button>")
+					str.appendTo(newDiv)
+					newDiv.appendTo("body")
+					$("#sure").click(function(){
+						$(this).parent().remove()
+					})	
+				}
+			})
+			$(document).on("mousemove",function(e){
+				var l=e.pageX-$(".move").width()/2,
+					t=e.pageY-$(".move").height()/2
+					maxl=$(window).width()-$(".move").width(),
+					maxt=$(window).height()-$(".move").height()
+				if(l<0){
+					l=0
+				}else if(l>maxl){
+					l=maxl
+				}
+				if(t<0){
+					t=0
+				}else if(t>maxt){
+					t=maxt
+				}
+				$(".move").css({"left":l,"top":t})
+			})
+		})
+		$(function(){
+			$("#money").start()
+		})
+	</script>
+</body>
+</html>

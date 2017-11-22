@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{margin:0;pading:0}
+		ul li{list-style: none;}
+		/*ul{
+			margin-top: 150px;
+			margin-left:60px ;
+		}*/
+		li{
+			width:150px;
+			height:150px;
+			border:1px solid green;
+			float:left;
+			margin:2px;
+			line-height: 150px;
+			text-align: center;
+			cursor:pointer;
+		}
+		.add{
+			float:left;
+			border:1px dashed #f00;
+		}	
+		.move{
+			position:absolute;
+			border:1px dashed #0000FF;
+		}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class='li'>1</li>
+			<li class='li'>2</li>
+			<li class='li'>3</li>
+			<li class='li'>4</li>
+			<li class='li'>5</li>
+		</ul>
+		<script src='../js/jquery-1.11.1.min.js'></script>
+		<script>
+			$(function(){
+				
+				//鼠标的按下事件
+				$('ul').on('mousedown','li',function(e){
+					//获取鼠标位置
+					var th = $(this),
+					    e =e || window.event,
+						start ={
+							x:e.pageX-th.position().left,
+							y:e.pageY-th.position().top
+						}	
+					th.after($('<li class="add"></li>'))	
+						
+					$(document).on('mousemove',function(e){
+						var e =e || window.event,
+							now = {
+								x:e.pageX-start.x,
+								y:e.pageY-start.y
+							}
+						th.attr('class','move').css({
+							'left':now.x,
+							'top':now.y
+						})
+						//遍历Li取中心线做判断
+						$('.li').each(function(){
+												
+							var c = $(this).position().left,
+								myC = $('.move').width()/2+$('.move').position().left,
+								left_c =$('.li:first').width()/2+$('.li:first').position().left,
+								my_c = $('.move').position().left;
+								
+								if(my_c<left_c){
+									$('.add').insertBefore($('.li:first'))
+								}
+								if(myC>c){
+									//把当前的放在.add的前面，也就是调换位置
+									$('.add').insertAfter($(this))
+//									$(this).after($('.add'))
+								}			
+						})					
+						
+					}).on('mouseup',function(){	
+						$(this).off('mousemove');
+						$('.move').attr('class','li').insertBefore('.add');
+						$('.add').remove();
+					})
+										
+				})				
+				
+			})
+			
+		</script>
+		
+	</body>
+</html>

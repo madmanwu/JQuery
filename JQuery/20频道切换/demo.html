@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#news{
+			width: 450px;
+			height: 240px;
+			border:1px solid;
+			padding:0 10px 10px 10px;
+			margin:20px auto;
+			position: relative;
+		}
+		p{
+			width: 450px;
+			height:50px;
+			line-height: 50px;
+			border-bottom: 1px solid #ccc;
+			position: relative;
+		}
+		p>b{
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			line-height: 50px;
+			text-align: center;
+			border:1px solid #ccc;
+			border-left: 0;
+			border-top: 0;
+			border-bottom: 0;
+			position: relative;
+		}
+		p>b>a{
+			position: absolute;
+			display: none;
+			top: 0;
+			right: 0;
+			width: 15px;
+			height: 15px;
+			background: #ccc;
+		}
+		p>span:first-child{
+			width: 100px;
+			font-size: 20px;
+			border:0;
+		}
+		p>span:nth-child(2){
+			border-left: 1px solid #ccc;
+		}
+		p>label{
+			position: absolute;
+			right: 0;
+			color: #999;
+			font-size: 12px;
+			cursor: pointer;
+		}
+		ul{
+			padding-top: 10px;
+		}
+		ul li{
+			width: 450px;
+			height:30px;
+			line-height: 30px;
+			font-size: 14px;
+			list-style-type: square;
+			list-style-position: inside;
+		}
+		ul li:first-child{
+			list-style: none;
+			font-size: 20px;
+			color: red;
+			text-decoration: underline;
+		}
+		form{
+			width: 450px;
+			height: 130px;
+			position: absolute;
+			top: 60px;
+			border:1px solid #ccc;
+			background: #fff;
+		}
+		form>h2{
+			margin-left: 30px;
+			margin-top: 10px;
+			color: #666;
+		}
+		form>input{
+			margin-left: 30px;
+			margin-top: 20px;
+		}
+		#mark{
+			width: 300px;
+			height: 100px;
+			border:1px solid #ccc;
+			box-sizing:border-box;
+			position: absolute;
+			top: 70px;
+			left: 50%;
+			margin-left: -150px;
+			background: #fff;
+			box-shadow:0 0 10px #333;
+		}
+		#mark>p{
+			width: 100%;
+			height: 30px;
+			font-size: 20px;
+			line-height: 30px;
+			margin-top: 20px;
+			text-align: center;
+		}
+		.btns{
+			width: 100%;
+			margin-top: 10px;
+			height: 20px;
+			padding: 0 60px;
+		}
+		.btns{
+			width: 100%;
+			margin-top:10px;
+			height: 20px;
+			padding:0 60px;
+			box-sizing:border-box;
+		}
+		.btn1{
+			float: left;
+		}
+		.btn2{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="news">
+		<p>
+			<span>评论</span>
+			<!-- <b>
+				<a href="#"></a>
+			</b> -->
+			<label for="">+定制</label>
+		</p>
+		<ul>
+			<li>动物园园长开黑车挣八百万 封中华神兽不为过</li>
+			<li>高速路上赶临盆孕妇下车 击穿人性底线</li>
+			<li>没完!"越狱"贪官重收监只是逗号</li>
+			<li>环球时报:台湾首席谈判代表是"共谍"太离奇</li>
+			<li>纹满文身彪形大汉 神秘人 是执法黑社会化例证</li>
+		</ul>
+		<form action="">
+			<h2>最多可定制4个频道</h2>
+			<input type="checkbox"><span>财经</span>
+			<input type="checkbox"><span>娱乐</span>
+			<input type="checkbox"><span>体育</span>
+			<input type="checkbox"><span>军事</span>
+			<input type="checkbox"><span>汽车</span>
+			<input type="checkbox"><span>科技</span>
+			<input type="checkbox"><span>股市</span>
+			<input type="checkbox"><span>时尚</span>
+			<input type="checkbox"><span>教育</span>
+			<input type="checkbox"><span>健康</span>
+		</form>
+	</div>
+	<script src='jquery1.7.js'></script>
+	<script>
+		$(function(){
+			$('form').hide();
+			$('p>label').on('click',function(){
+				if($(this).text()=='+定制'){
+					$('form').show();
+					$(this).text("确定");
+				}else{
+					$('form').hide();
+					$(this).text("+定制");
+				}
+			});
+			$('form').on('click','input',function(){
+
+				$(this).toggleClass('checked');
+				if($(this).hasClass('checked')){
+					var len=$('b').length;
+					if(len<4){
+						var str='<b>'+$(this).next().text()+'<a></a></b>';
+						$('p').find('label').before(str);
+					}else{
+						var box=$("<div id='mark'><p>最多只能选择四个频道</p><div class='btns'><button class='btn1'>确定</button><button class='btn2'>取消</button></div></div>");
+						$('#news').append(box);
+						$(':button').on('click',function(){
+							$(this).parents('#mark').remove();
+						})
+						move();
+						return false;
+					}
+				}else{
+					var content=$(this).next().text();
+					$('p b').each(function(){
+						if(content==$(this).text()){
+							$(this).remove();
+						}
+					})
+				}
+
+
+				//input选框
+				var inp=$(this).next();
+				$('p').on('click','a',function(){
+					$(this).parent().remove();
+					var txt=$(this).parent().text();
+					if(txt==inp.text()){
+						$(inp).prev().prop('checked',false);
+					}
+				})
+				$('p').find('b').hover(function(){
+					$(this).children('a').show();
+				},function(){
+					$(this).children('a').hide();
+				})
+			})
+
+
+			//弹框拖动
+			function move(){
+				$('#mark').on('mousedown',function(e){
+					var e=window.event || e;
+					var posX=e.clientX-$(this).position().left;
+					var posY=e.clientY-$(this).position().top;
+
+					var that=$(this);
+					$(document).on('mousemove',function(e){
+						var nowX=e.clientX-posX;
+						var nowY=e.clientY-posY;
+
+						that.css({
+							left:nowX,
+							top:nowY
+						})
+					}).on('mouseup',function(){
+						$(this).off('mousemove');
+					})
+
+				})
+			}
+
+		})
+	</script>
+</body>
+</html>

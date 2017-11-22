@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.wrap{
+			margin:0 auto;
+			position: relative;
+		}
+		.wrap img{
+			width:300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="images/img1.jpg" alt="">
+		<img src="images/img2.jpg" alt="">
+		<img src="images/img3.jpg" alt="">
+		<img src="images/img4.jpg" alt="">
+		<img src="images/img5.jpg" alt="">
+		<img src="images/img6.jpg" alt="">
+		<img src="images/img7.jpg" alt="">
+		<img src="images/img8.jpg" alt="">
+		<img src="images/img9.jpg" alt="">
+		<img src="images/img10.jpg" alt="">
+		<img src="images/img11.jpg" alt="">
+		<img src="images/img12.jpg" alt="">
+		<img src="images/img13.jpg" alt="">
+	</div>
+	<script src='js/jquery1.7.js'></script>
+	<script>
+	$(function(){
+		$('.wrap img').css({
+			position:'absolute'
+		})
+		var imgW=$('.wrap img').width()+10;
+		var view=Math.floor($(window).width()/imgW);
+		$('.wrap').width(view*imgW)
+		var arr=[];
+		for(var i=0;i<$('.wrap img').length;i++){
+			if(i<view){
+				arr.push(0)
+			}
+			var imgH=$('.wrap img').eq(i).height()+10;
+			var minH=Math.min.apply(Math,arr)
+			var ind=$.inArray(minH,arr)
+			$('.wrap img').eq(i).animate({
+				left:ind*imgW,
+				top:minH
+			})
+			arr[ind]+=imgH
+			console.log(arr)
+		}
+		function rand(){
+			var data={"imgsrc":[
+				{"src":"images/img1.jpg"},
+				{"src":"images/img2.jpg"},
+				{"src":"images/img3.jpg"},
+				{"src":"images/img4.jpg"},
+				{"src":"images/img5.jpg"},
+				{"src":"images/img6.jpg"},
+				{"src":"images/img7.jpg"},
+				{"src":"images/img8.jpg"},
+				{"src":"images/img9.jpg"},
+				{"src":"images/img10.jpg"},
+				{"src":"images/img11.jpg"},
+				{"src":"images/img12.jpg"},
+				{"src":"images/img13.jpg"}
+			]}
+			$.each(data.imgsrc,function(i,val){
+				var newImg=$('<img src="'+val.src+'" alt="" />')
+
+				newImg.insertAfter($('.wrap img:last-child'))
+				newImg.css('position','absolute')
+				var imgW=newImg.width()+10;
+				var imgH=newImg.height()+10;
+				var minH=Math.min.apply(Math,arr)
+				var ind=$.inArray(minH,arr)
+				newImg.css({'left':imgW,top:minH})
+				newImg.animate({
+					left:ind*imgW,
+					top:minH
+				})
+				arr[ind]+=imgH
+			})
+		}
+		$(window).on('scroll',function(){
+			var scro=$(document).height()-$(window).height();
+			if($(this).scrollTop()>=scro){
+				rand();
+			}
+		})
+
+	})
+
+	</script>
+</body>
+</html>

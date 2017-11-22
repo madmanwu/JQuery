@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+		*{margin:0 auto;padding: 0;}
+		#box{width: 1000px;height: 409px;background: #ccc;overflow: hidden;position: relative;}
+		#ul{list-style: none;width: 10000px;height: 409px;position: relative;}
+		#ul li{float: left;}
+		#ol{list-style: none;width: 200px;height: 20px;position: absolute;bottom: 20px;right: 20px;}
+		#ol li{float: left;width: 20px;height: 20px;background: red;border:1px solid #666;text-align: center;line-height: 20px;margin-left: 10px;cursor: pointer}
+		#left{position: absolute;left:  0;top: 50%;}
+		#right{position: absolute;right: 0;top: 50%;}
+        #ol .active{opacity: 0.5;background: blue};
+	</style>
+</head>
+<body>
+    <div id="box">
+		<ul id="ul">
+			<li><img src="img/1.jpg" alt=""></li>
+			<li><img src="img/2.jpg" alt=""></li>
+			<li><img src="img/3.jpg" alt=""></li>
+			<li><img src="img/4.jpg" alt=""></li>
+			<li><img src="img/5.jpg" alt=""></li>
+			<li><img src="img/6.jpg" alt=""></li>
+		</ul>
+		<ol id="ol">
+		    <li class="active">1</li>
+		    <li>2</li>
+		    <li>3</li>
+		    <li>4</li>
+		    <li>5</li>
+		    <li>6</li>
+		</ol>
+		<img src="img/l.png" alt="" id="left">
+		<img src="img/r.png" alt="" id="right">
+	</div>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+    $(function(){
+        // 获取一张图片的宽度
+        var w = $("#ul img").eq(0).width();
+//        console.log(w) 1000
+        // 获取整个图片盒子的宽度
+        $("#ul").width($("#ul img").length*w);
+//        console.log($("ul").width());6000
+        // 获取有几张图片
+        var len = $("#ul img").length;
+//        console.log(len)
+        
+        // 计数器并赋初值
+        var num = 0;
+        var timer = null;
+        // 自动
+        timer = setInterval(right,2000);
+        
+        // 封装运动的函数
+        function sport(nums){
+//            $("#ul").stop().animate({"margin-left":-w*(nums)},2000);
+            $("#ul").css("margin-left",(-w*nums));
+        }
+        
+        // 添加右按钮的点击事件
+        $("#right").on("click",function(){
+            right();
+        })
+        // 封装向右运动的函数
+        function right(){
+            num++;
+            if(num >= len){
+                num = 0;
+                $("#ul").css("margin-left",0);
+            }
+            sport(num);
+            inde(num);
+        }
+        // 添加左按钮的点击事件
+        $("#left").on("click",function(){
+            left();
+        })
+        // 封装向左运动的函数
+        function left(){
+            if(num == 0){
+                num = len-1;
+                $("#ul").css("margin-left",-($("#ul img").length-1)*w);
+            }
+            num--;
+            sport(num);
+            inde(num);
+        }
+        
+        // 封装索引函数
+        function inde(n){
+            if(n >= len){
+                n = 0 ;
+            }
+            $("#ol li").eq(n).addClass("active").siblings().removeClass("active");
+        }
+        
+        // 点击索引
+        $("#ol").on("click","li",function(){
+            num = $(this).index();
+            sport(num);
+            inde(num);
+        })
+        // 鼠标悬停
+        $("#box").hover(function(){
+            clearInterval(timer);
+        },function(){
+            timer = setInterval(right,2000);
+        })
+    })
+</script>
+</html>

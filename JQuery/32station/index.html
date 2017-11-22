@@ -1,0 +1,118 @@
+  <!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		 }
+	#list li,#list1 li{
+		float: left;
+		height: 50px;
+		width: 60px;
+
+		margin-left: 60px;
+		text-align: center;
+		line-height: 50px;
+
+	}
+	#list2 li{
+		padding-left: 60px;
+	}
+		.newli{ float: left; margin-left: 20px; height: 40px;}
+		h6,p,h3{clear: both; margin-bottom: 5px; height: 30px; margin-left: 60px; background: #ccc; line-height: 30px; padding-left: 5px;}
+		h5{clear: both; margin-bottom: 5px; height: 30px; margin-left: 60px; background: #ccc; line-height: 30px; padding-left: 5px; display: none;}
+		hr{clear: both;}
+		#list1 a{
+			padding-left: 30px;
+			float: left;
+			display: block;
+			width: 30px;height: 20px;
+			text-decoration: none;
+			color: #000;
+		}
+		.bg{
+			background: green;
+		}
+		#list2{
+			line-height: 35px;
+		}
+		#list2 p span{
+			float: right;
+			color: red;
+			padding-right: 20px;
+		}
+		.bg{
+			background: green;
+		}
+		h3 a{
+		float: right;
+		}
+		</style>
+</head>
+<body>
+<div id="box">
+		<h6 id="btn">热门城市</h6>
+		<ul id="list">
+
+		</ul>
+		<h6 id="btn2">更多</h6>
+		<ol id="list1">
+
+		</ol><hr>
+		<div id="list2"></div>
+	</div>
+	<script src="jquery1.7.js"></script>
+	<script src="data1.js"></script>
+	<script>
+		$(function(){
+
+			var arr=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+			$.each(data.hotcitylist,function(i,val){
+				var str="<li>"+val.name+"</li>";
+				$(str).appendTo("#list");
+			})
+			var str="";
+			$.each(arr,function(i,val){
+				 str+="<li><a href='#title"+i+"'>"+val+"</a></li>";
+			})
+			$("#list1").html(str)
+
+			for(var i in arr){
+				var div,inner="";
+				var word=arr[i];
+				var div=$("<div></div>")
+					div.attr("id","title"+i);
+					inner="<h3>"+word+"<a class='return'>返回顶部</a></h3><ul></ul>";
+					div.html(inner);
+					div.appendTo("#list2");
+					var str1="";
+					$.each(data.citylist,function(j,vall){
+						$.each(vall,function(a,vals){
+							$.each(vals,function(key,arr1){
+
+								if(arr1.letter==word){
+									str1+="<li>"+arr1.name+"</li>";
+									//console.log(str1)
+								}$("#list2>div").eq(i).children("ul").html(str1);
+							})
+						})
+					})
+
+			}
+
+			$("#list2").on("click",".return",function(){
+				$("body").stop().animate({"scrollTop":0},1000)
+			})
+
+
+
+
+
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        #box{
+           width: 980px;
+            height: 420px;
+            border: 1px solid #000;
+            position: relative;
+            overflow: hidden;
+        }
+        #wrap img{
+            float: left;
+            width: 980px;
+            height: 420px;
+        }
+        #right img{
+            position: absolute;
+            right: 0;top: 45%;
+            background: #f00;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        #left img{
+            position: absolute;
+            left: 0;top: 45%;
+            background: #f00;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        #list{
+            position: absolute;
+            bottom: 3px;left: 350px;
+        }
+        #list span{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            float: left;
+            border-radius: 50%;
+            background: #CCC;
+            opacity: 0.8px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #list .active{
+            background: #666;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="wrap">
+            <img src="1.jpg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="3.jpg" alt="">
+            <img src="4.jpg" alt="">
+            <img src="5.jpg" alt="">
+            <img src="6.jpg" alt="">
+            <img src="1.jpg" alt="">
+        </div>
+        <div id="right"><img src="right.png" alt=""></div>
+        <div id="left"><img src="left.png" alt=""></div>
+        <div id="list">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+        </div>
+    </div>
+</body>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+    $(function(){
+        // 获取一张图片的宽度
+        var w = $("#wrap img").eq(0).width();
+//        console.log(w); 980px;
+        // 获取整个图片外面的盒子的宽度
+        $("#wrap").width($("#wrap img").length*w);
+//        console.log($("#wrap").width()); // 6860px;
+        
+        var num = 0;
+//        var timer = null;
+        
+        // 添加自动播放
+        timer = setInterval(right,2000);
+        
+        // 封装向右运动的函数
+        function right(){
+            if(num >= $("#wrap img").length-1){
+                num=0;
+                $("#wrap").css("margin-left",0);
+            }
+            num++;
+            sport(num);
+            inde(num);
+        }
+        
+        // 封装向左运动的函数
+        function left(){
+            if(num == 0){
+                num = $("#wrap img").length-1;
+                $("#wrap").css("margin-left",-($("#wrap img").length-1)*w);
+            }
+            num--;
+            sport(num);
+            inde(num);
+        }
+        
+        // 添加点击右按钮的事件
+        $("#right").on("click",function(){
+            right();
+        })
+        // 添加点击右按钮的事件
+        $("#left").on("click",function(){
+            left();
+        })
+        
+        // 运动
+        function sport(nums){
+            $("#wrap").stop().animate({"margin-left":-w*(nums)},2000);
+        }
+        // 索引
+        function inde(n){
+            if(n == $("#wrap img").length-1){
+                n=0;
+            }
+            $("#list span").eq(n).addClass("active").siblings().removeClass("active");
+        }
+        // 鼠标悬停
+        $("#box").hover(function(){
+            clearInterval(timer);
+        },function(){
+            timer = setInterval(right,2000);
+        })
+        // 鼠标点击索引
+        $("#list").on("click","span",function(){
+            num = $(this).index();
+            inde(num);
+            sport(num);
+        })
+    })
+</script>
+</html> 

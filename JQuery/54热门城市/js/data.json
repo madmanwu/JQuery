@@ -1,0 +1,2695 @@
+{
+    "TabId": "2",
+    "Name": "ABCDEF",
+    "NameEn": "ABCDEF",
+    "CityList": [
+        {
+            "ProvinceId": "3300",
+            "CityId": "3301",
+            "CityCode": "3301",
+            "CityNameCn": "澳门",
+            "CityNameEn": "Macau",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2400",
+            "CityId": "2405",
+            "CityCode": "2405",
+            "CityNameCn": "安顺市",
+            "CityNameEn": "Anshun",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0803",
+            "CityCode": "0803",
+            "CityNameCn": "鞍山",
+            "CityNameEn": "Anshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1303",
+            "CityCode": "1303",
+            "CityNameCn": "安庆",
+            "CityNameEn": "Anqing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1240",
+            "CityCode": "1240",
+            "CityNameCn": "安吉（湖州）",
+            "CityNameEn": "Anji",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0100",
+            "CityId": "0101",
+            "CityCode": "0101",
+            "CityNameCn": "北京",
+            "CityNameEn": "Beijing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0508",
+            "CityCode": "0508",
+            "CityNameCn": "北戴河（秦皇岛）",
+            "CityNameEn": "Beidaihe",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2100",
+            "CityId": "2103",
+            "CityCode": "2103",
+            "CityNameCn": "北海",
+            "CityNameEn": "Beihai",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0512",
+            "CityCode": "0512",
+            "CityNameCn": "保定",
+            "CityNameEn": "Baoding",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1305",
+            "CityCode": "1305",
+            "CityNameCn": "蚌埠",
+            "CityNameEn": "Bengbu",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2700",
+            "CityId": "2702",
+            "CityCode": "2702",
+            "CityNameCn": "宝鸡",
+            "CityNameEn": "Baoji",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0700",
+            "CityId": "0702",
+            "CityCode": "0702",
+            "CityNameCn": "包头",
+            "CityNameEn": "Baotou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1618",
+            "CityCode": "1618",
+            "CityNameCn": "滨州",
+            "CityNameEn": "Binzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0805",
+            "CityCode": "0805",
+            "CityNameCn": "本溪",
+            "CityNameEn": "Benxi",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2100",
+            "CityId": "2112",
+            "CityCode": "2112",
+            "CityNameCn": "百色",
+            "CityNameEn": "Baise",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2301",
+            "CityCode": "2301",
+            "CityNameCn": "成都",
+            "CityNameEn": "Chengdu",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0400",
+            "CityId": "0401",
+            "CityCode": "0401",
+            "CityNameCn": "重庆",
+            "CityNameEn": "Chongqing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1900",
+            "CityId": "1901",
+            "CityCode": "1901",
+            "CityNameCn": "长沙",
+            "CityNameEn": "Changsha",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0900",
+            "CityId": "0901",
+            "CityCode": "0901",
+            "CityNameCn": "长春",
+            "CityNameEn": "Changchun",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1103",
+            "CityCode": "1103",
+            "CityNameCn": "常州",
+            "CityNameEn": "Changzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0502",
+            "CityCode": "0502",
+            "CityNameCn": "承德",
+            "CityNameEn": "Chengde",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1117",
+            "CityCode": "1117",
+            "CityNameCn": "常熟（苏州）",
+            "CityNameEn": "Changshu",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2016",
+            "CityCode": "2016",
+            "CityNameCn": "潮州",
+            "CityNameEn": "ChaoZhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0516",
+            "CityCode": "0516",
+            "CityNameCn": "沧州",
+            "CityNameEn": "Cangzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1231",
+            "CityCode": "1231",
+            "CityNameCn": "慈溪（宁波）",
+            "CityNameEn": "Cixi（ningbo）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1900",
+            "CityId": "1907",
+            "CityCode": "1907",
+            "CityNameCn": "郴州",
+            "CityNameEn": "Chenzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0700",
+            "CityId": "0707",
+            "CityCode": "0707",
+            "CityNameCn": "赤峰",
+            "CityNameEn": "Chifeng",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0900",
+            "CityId": "0907",
+            "CityCode": "0907",
+            "CityNameCn": "长白山池北",
+            "CityNameEn": "Chibei",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0536",
+            "CityCode": "0536",
+            "CityNameCn": "昌黎（秦皇岛）",
+            "CityNameEn": "changli",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0600",
+            "CityId": "0617",
+            "CityCode": "0617",
+            "CityNameCn": "长治",
+            "CityNameEn": "changzhi",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0801",
+            "CityCode": "0801",
+            "CityNameCn": "大连",
+            "CityNameEn": "Dalian",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2007",
+            "CityCode": "2007",
+            "CityNameCn": "东莞",
+            "CityNameEn": "Dongguan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2500",
+            "CityId": "2505",
+            "CityCode": "2505",
+            "CityNameCn": "大理",
+            "CityNameEn": "Dali",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0600",
+            "CityId": "0602",
+            "CityCode": "0602",
+            "CityNameCn": "大同",
+            "CityNameEn": "Datong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0806",
+            "CityCode": "0806",
+            "CityNameCn": "丹东",
+            "CityNameEn": "Dandong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2385",
+            "CityCode": "2385",
+            "CityNameCn": "都江堰青城山（成都）",
+            "CityNameEn": "dujiangyanqingchengshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2800",
+            "CityId": "2803",
+            "CityCode": "2803",
+            "CityNameCn": "敦煌",
+            "CityNameEn": "Dunhuang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1612",
+            "CityCode": "1612",
+            "CityNameCn": "德州",
+            "CityNameEn": "Dezhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1607",
+            "CityCode": "1607",
+            "CityNameCn": "东营",
+            "CityNameEn": "Dongying",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1719",
+            "CityCode": "1719",
+            "CityNameCn": "登封（郑州）",
+            "CityNameEn": "Dengfeng",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2312",
+            "CityCode": "2312",
+            "CityNameCn": "德阳",
+            "CityNameEn": "Deyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1000",
+            "CityId": "1004",
+            "CityCode": "1004",
+            "CityNameCn": "大庆",
+            "CityNameEn": "Daqing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2372",
+            "CityCode": "2372",
+            "CityNameCn": "大邑（成都）",
+            "CityNameEn": "dayi",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1242",
+            "CityCode": "1242",
+            "CityNameCn": "德清",
+            "CityNameEn": "Deqing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2340",
+            "CityCode": "2340",
+            "CityNameCn": "达州",
+            "CityNameEn": "Dazhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2310",
+            "CityCode": "2310",
+            "CityNameCn": "峨眉山",
+            "CityNameEn": "Emeishan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1800",
+            "CityId": "1811",
+            "CityCode": "1811",
+            "CityNameCn": "恩施",
+            "CityNameEn": "Enshi",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0700",
+            "CityId": "0705",
+            "CityCode": "0705",
+            "CityNameCn": "鄂尔多斯",
+            "CityNameEn": "Ordos",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2050",
+            "CityCode": "2050",
+            "CityNameCn": "恩平",
+            "CityNameEn": "Enping",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0700",
+            "CityId": "0726",
+            "CityCode": "0726",
+            "CityNameCn": "额尔古纳（呼伦贝尔）",
+            "CityNameEn": "eerguna（hulunbeier）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1400",
+            "CityId": "1402",
+            "CityCode": "1402",
+            "CityNameCn": "福州",
+            "CityNameEn": "Fuzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2005",
+            "CityCode": "2005",
+            "CityNameCn": "佛山",
+            "CityNameEn": "Foshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1900",
+            "CityId": "1915",
+            "CityCode": "1915",
+            "CityNameCn": "凤凰（湘西）",
+            "CityNameEn": "Fenghuang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1307",
+            "CityCode": "1307",
+            "CityNameCn": "阜阳",
+            "CityNameEn": "Fuyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0804",
+            "CityCode": "0804",
+            "CityNameCn": "抚顺",
+            "CityNameEn": "Fushun",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        }
+    ]
+},
+{
+    "TabId": "3",
+    "Name": "GHJK",
+    "NameEn": "GHJK",
+    "CityList": [
+        {
+            "ProvinceId": "2000",
+            "CityId": "2001",
+            "CityCode": "2001",
+            "CityNameCn": "广州",
+            "CityNameEn": "Guangzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2100",
+            "CityId": "2101",
+            "CityCode": "2101",
+            "CityNameCn": "桂林",
+            "CityNameEn": "Guilin",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2400",
+            "CityId": "2401",
+            "CityCode": "2401",
+            "CityNameCn": "贵阳",
+            "CityNameEn": "Guiyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1500",
+            "CityId": "1516",
+            "CityCode": "1516",
+            "CityNameCn": "赣州",
+            "CityNameEn": "Ganzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2320",
+            "CityCode": "2320",
+            "CityNameCn": "广元",
+            "CityNameEn": "Guangyuan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1201",
+            "CityCode": "1201",
+            "CityNameCn": "杭州",
+            "CityNameEn": "Hangzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1000",
+            "CityId": "1001",
+            "CityCode": "1001",
+            "CityNameCn": "哈尔滨",
+            "CityNameEn": "Harbin",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1301",
+            "CityCode": "1301",
+            "CityNameCn": "合肥",
+            "CityNameEn": "Hefei",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2200",
+            "CityId": "2202",
+            "CityCode": "2202",
+            "CityNameCn": "海口",
+            "CityNameEn": "Haikou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1302",
+            "CityCode": "1302",
+            "CityNameCn": "黄山",
+            "CityNameEn": "Huangshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2010",
+            "CityCode": "2010",
+            "CityNameCn": "惠州",
+            "CityNameEn": "Huizhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0700",
+            "CityId": "0701",
+            "CityCode": "0701",
+            "CityNameCn": "呼和浩特",
+            "CityNameEn": "Hohhot",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1900",
+            "CityId": "1918",
+            "CityCode": "1918",
+            "CityNameCn": "衡阳",
+            "CityNameEn": "Hengyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1288",
+            "CityCode": "1288",
+            "CityNameCn": "横店（金华）",
+            "CityNameEn": "hengdian（jin hua）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1123",
+            "CityCode": "1123",
+            "CityNameCn": "淮安",
+            "CityNameEn": "Huaian",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0515",
+            "CityCode": "0515",
+            "CityNameCn": "邯郸",
+            "CityNameEn": "Handan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1239",
+            "CityCode": "1239",
+            "CityNameCn": "湖州",
+            "CityNameEn": "Huzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2026",
+            "CityCode": "2026",
+            "CityNameCn": "河源",
+            "CityNameEn": "Heyuan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1234",
+            "CityCode": "1234",
+            "CityNameCn": "海宁",
+            "CityNameEn": "Haining",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2700",
+            "CityId": "2707",
+            "CityCode": "2707",
+            "CityNameCn": "汉中",
+            "CityNameEn": "Hanzhong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1330",
+            "CityCode": "1330",
+            "CityNameCn": "宏村（黄山）",
+            "CityNameEn": "Hongcun（Huangshan）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0820",
+            "CityCode": "0820",
+            "CityNameCn": "葫芦岛",
+            "CityNameEn": "Huludao",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0700",
+            "CityId": "0712",
+            "CityCode": "0712",
+            "CityNameCn": "呼伦贝尔（海拉尔）",
+            "CityNameEn": "Hulunbeier",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0514",
+            "CityCode": "0514",
+            "CityNameCn": "衡水",
+            "CityNameEn": "Hengshui",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1306",
+            "CityCode": "1306",
+            "CityNameCn": "淮南",
+            "CityNameEn": "Huainan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1602",
+            "CityCode": "1602",
+            "CityNameCn": "济南",
+            "CityNameEn": "Jinan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2311",
+            "CityCode": "2311",
+            "CityNameCn": "九寨沟",
+            "CityNameEn": "Jiuzhaigou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1500",
+            "CityId": "1502",
+            "CityCode": "1502",
+            "CityNameCn": "九江",
+            "CityNameEn": "Jiujiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1209",
+            "CityCode": "1209",
+            "CityNameCn": "嘉兴",
+            "CityNameEn": "Jiaxing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1204",
+            "CityCode": "1204",
+            "CityNameCn": "金华",
+            "CityNameEn": "Jinhua",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0810",
+            "CityCode": "0810",
+            "CityNameCn": "锦州",
+            "CityNameEn": "Jinzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0900",
+            "CityId": "0902",
+            "CityCode": "0902",
+            "CityNameCn": "吉林",
+            "CityNameEn": "Jilin",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1710",
+            "CityCode": "1710",
+            "CityNameCn": "焦作",
+            "CityNameEn": "Jiaozuo",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1619",
+            "CityCode": "1619",
+            "CityNameCn": "济宁",
+            "CityNameEn": "Jining",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1500",
+            "CityId": "1507",
+            "CityCode": "1507",
+            "CityNameCn": "景德镇",
+            "CityNameEn": "Jingdezhen",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2021",
+            "CityCode": "2021",
+            "CityNameCn": "江门",
+            "CityNameEn": "Jiangmen",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1309",
+            "CityCode": "1309",
+            "CityNameCn": "九华山（池州）",
+            "CityNameEn": "Jiuhuashan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2006",
+            "CityCode": "2006",
+            "CityNameCn": "揭阳",
+            "CityNameEn": "Jieyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1800",
+            "CityId": "1802",
+            "CityCode": "1802",
+            "CityNameCn": "荆州",
+            "CityNameEn": "Jingzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1113",
+            "CityCode": "1113",
+            "CityNameCn": "江阴（无锡）",
+            "CityNameEn": "Jiangyin",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2800",
+            "CityId": "2802",
+            "CityCode": "2802",
+            "CityNameCn": "嘉峪关",
+            "CityNameEn": "Jiayuguan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0600",
+            "CityId": "0607",
+            "CityCode": "0607",
+            "CityNameCn": "晋中",
+            "CityNameEn": "Jinzhong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0600",
+            "CityId": "0609",
+            "CityCode": "0609",
+            "CityNameCn": "晋城",
+            "CityNameEn": "Jincheng",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1625",
+            "CityCode": "1625",
+            "CityNameCn": "即墨（青岛）",
+            "CityNameEn": "Jimo",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1400",
+            "CityId": "1413",
+            "CityCode": "1413",
+            "CityNameCn": "晋江（泉州）",
+            "CityNameEn": "Jinjiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2500",
+            "CityId": "2501",
+            "CityCode": "2501",
+            "CityNameCn": "昆明",
+            "CityNameEn": "Kunming",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1703",
+            "CityCode": "1703",
+            "CityNameCn": "开封",
+            "CityNameEn": "Kaifeng",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1127",
+            "CityCode": "1127",
+            "CityNameCn": "昆山（苏州）",
+            "CityNameEn": "Kunshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2400",
+            "CityId": "2404",
+            "CityCode": "2404",
+            "CityNameCn": "凯里（黔东南州）",
+            "CityNameEn": "Kaili",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2048",
+            "CityCode": "2048",
+            "CityNameCn": "开平",
+            "CityNameEn": "Kaiping",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        }
+    ]
+},
+{
+    "TabId": "4",
+    "Name": "LMNPQ",
+    "NameEn": "LMNPQ",
+    "CityList": [
+        {
+            "ProvinceId": "2500",
+            "CityId": "2503",
+            "CityCode": "2503",
+            "CityNameCn": "丽江（含束河）",
+            "CityNameEn": "Lijiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2800",
+            "CityId": "2801",
+            "CityCode": "2801",
+            "CityNameCn": "兰州",
+            "CityNameEn": "Lanzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1702",
+            "CityCode": "1702",
+            "CityNameCn": "洛阳",
+            "CityNameEn": "Luoyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2600",
+            "CityId": "2601",
+            "CityCode": "2601",
+            "CityNameCn": "拉萨",
+            "CityNameEn": "Lhasa",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2100",
+            "CityId": "2105",
+            "CityCode": "2105",
+            "CityNameCn": "柳州",
+            "CityNameEn": "Liuzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1611",
+            "CityCode": "1611",
+            "CityNameCn": "临沂",
+            "CityNameEn": "Linyi",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1110",
+            "CityCode": "1110",
+            "CityNameCn": "连云港",
+            "CityNameEn": "Lianyungang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0511",
+            "CityCode": "0511",
+            "CityNameCn": "廊坊",
+            "CityNameEn": "Langfang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1122",
+            "CityCode": "1122",
+            "CityNameCn": "溧阳市",
+            "CityNameEn": "Liyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1500",
+            "CityId": "1506",
+            "CityCode": "1506",
+            "CityNameCn": "庐山（九江）",
+            "CityNameEn": "Lushan（Jiujiang）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2303",
+            "CityCode": "2303",
+            "CityNameCn": "乐山",
+            "CityNameEn": "Leshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2500",
+            "CityId": "2524",
+            "CityCode": "2524",
+            "CityNameCn": "泸沽湖",
+            "CityNameEn": "luguhu",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1622",
+            "CityCode": "1622",
+            "CityNameCn": "聊城",
+            "CityNameEn": "Liaocheng",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2314",
+            "CityCode": "2314",
+            "CityNameCn": "泸州",
+            "CityNameEn": "Luzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1230",
+            "CityCode": "1230",
+            "CityNameCn": "丽水",
+            "CityNameEn": "Lishui",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1400",
+            "CityId": "1409",
+            "CityCode": "1409",
+            "CityNameCn": "龙岩",
+            "CityNameEn": "Longyan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1319",
+            "CityCode": "1319",
+            "CityNameCn": "六安",
+            "CityNameEn": "luan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0600",
+            "CityId": "0603",
+            "CityCode": "0603",
+            "CityNameCn": "临汾",
+            "CityNameEn": "Linfen",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2317",
+            "CityCode": "2317",
+            "CityNameCn": "阆中（南充）",
+            "CityNameEn": "Langzhong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1213",
+            "CityCode": "1213",
+            "CityNameCn": "临安（杭州）",
+            "CityNameEn": "Linan（HangZhou）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2302",
+            "CityCode": "2302",
+            "CityNameCn": "绵阳",
+            "CityNameEn": "Mianyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2028",
+            "CityCode": "2028",
+            "CityNameCn": "梅州",
+            "CityNameEn": "Meizhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1311",
+            "CityCode": "1311",
+            "CityNameCn": "马鞍山",
+            "CityNameEn": "Maanshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2009",
+            "CityCode": "2009",
+            "CityNameCn": "茂名",
+            "CityNameEn": "Maoming",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1000",
+            "CityId": "1002",
+            "CityCode": "1002",
+            "CityNameCn": "牡丹江",
+            "CityNameEn": "Mudanjiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1101",
+            "CityCode": "1101",
+            "CityNameCn": "南京",
+            "CityNameEn": "Nanjing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1202",
+            "CityCode": "1202",
+            "CityNameCn": "宁波",
+            "CityNameEn": "Ningbo",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1500",
+            "CityId": "1501",
+            "CityCode": "1501",
+            "CityNameCn": "南昌",
+            "CityNameEn": "Nanchang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2100",
+            "CityId": "2102",
+            "CityCode": "2102",
+            "CityNameCn": "南宁",
+            "CityNameEn": "Nanning",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1107",
+            "CityCode": "1107",
+            "CityNameCn": "南通",
+            "CityNameEn": "Nantong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0504",
+            "CityCode": "0504",
+            "CityNameCn": "南戴河（秦皇岛）",
+            "CityNameEn": "Nandaihe",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2309",
+            "CityCode": "2309",
+            "CityNameCn": "南充",
+            "CityNameEn": "Nanchong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1707",
+            "CityCode": "1707",
+            "CityNameCn": "南阳",
+            "CityNameEn": "Nanyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1252",
+            "CityCode": "1252",
+            "CityNameCn": "宁海（宁波）",
+            "CityNameEn": "Ninghai（ningbo）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1297",
+            "CityCode": "1297",
+            "CityNameCn": "南浔（湖州）",
+            "CityNameEn": "nanxun",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0600",
+            "CityId": "0608",
+            "CityCode": "0608",
+            "CityNameCn": "平遥（晋中）",
+            "CityNameEn": "Pingyao",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1613",
+            "CityCode": "1613",
+            "CityNameCn": "蓬莱（烟台）",
+            "CityNameEn": "Penglai",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1400",
+            "CityId": "1406",
+            "CityCode": "1406",
+            "CityNameCn": "莆田",
+            "CityNameEn": "Putian",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0809",
+            "CityCode": "0809",
+            "CityNameCn": "盘锦",
+            "CityNameEn": "Panjin",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2321",
+            "CityCode": "2321",
+            "CityNameCn": "攀枝花",
+            "CityNameEn": "Panzhihua",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1601",
+            "CityCode": "1601",
+            "CityNameCn": "青岛",
+            "CityNameEn": "Qingdao",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0503",
+            "CityCode": "0503",
+            "CityNameCn": "秦皇岛",
+            "CityNameEn": "Qinhuangdao",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1233",
+            "CityCode": "1233",
+            "CityNameCn": "千岛湖（杭州）",
+            "CityNameEn": "Qiandaohu（hangzhou）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1400",
+            "CityId": "1403",
+            "CityCode": "1403",
+            "CityNameCn": "泉州",
+            "CityNameEn": "Quanzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2027",
+            "CityCode": "2027",
+            "CityNameCn": "清远",
+            "CityNameEn": "Qingyuan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1610",
+            "CityCode": "1610",
+            "CityNameCn": "曲阜（济宁）",
+            "CityNameEn": "Qufu",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2200",
+            "CityId": "2206",
+            "CityCode": "2206",
+            "CityNameCn": "琼海（博鳌）",
+            "CityNameEn": "Qionghai（Boao）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1000",
+            "CityId": "1005",
+            "CityCode": "1005",
+            "CityNameCn": "齐齐哈尔",
+            "CityNameEn": "Qiqihaer",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1235",
+            "CityCode": "1235",
+            "CityNameCn": "衢州",
+            "CityNameEn": "Quzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2100",
+            "CityId": "2109",
+            "CityCode": "2109",
+            "CityNameCn": "钦州",
+            "CityNameEn": "Qinzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        }
+    ]
+},
+{
+    "TabId": "5",
+    "Name": "RSTW",
+    "NameEn": "RSTW",
+    "CityList": [
+        {
+            "ProvinceId": "1600",
+            "CityId": "1615",
+            "CityCode": "1615",
+            "CityNameCn": "日照",
+            "CityNameEn": "Rizhao",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1636",
+            "CityCode": "1636",
+            "CityNameCn": "荣成（威海）",
+            "CityNameEn": "Rongcheng",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1237",
+            "CityCode": "1237",
+            "CityNameCn": "瑞安（温州）",
+            "CityNameEn": "Ruian（wenzhou）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1661",
+            "CityCode": "1661",
+            "CityNameCn": "乳山（威海）",
+            "CityNameEn": "Rushan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2500",
+            "CityId": "2520",
+            "CityCode": "2520",
+            "CityNameCn": "瑞丽（德宏州）",
+            "CityNameEn": "Ruili",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0200",
+            "CityId": "0201",
+            "CityCode": "0201",
+            "CityNameCn": "上海",
+            "CityNameEn": "Shanghai",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2003",
+            "CityCode": "2003",
+            "CityNameCn": "深圳",
+            "CityNameEn": "Shenzhen",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1102",
+            "CityCode": "1102",
+            "CityNameCn": "苏州",
+            "CityNameEn": "Soochow",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2200",
+            "CityId": "2201",
+            "CityCode": "2201",
+            "CityNameCn": "三亚",
+            "CityNameEn": "Sanya",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0802",
+            "CityCode": "0802",
+            "CityNameCn": "沈阳",
+            "CityNameEn": "Shenyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0501",
+            "CityCode": "0501",
+            "CityNameCn": "石家庄",
+            "CityNameEn": "Shijiazhuang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1205",
+            "CityCode": "1205",
+            "CityNameCn": "绍兴",
+            "CityNameEn": "Shaoxing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2002",
+            "CityCode": "2002",
+            "CityNameCn": "汕头",
+            "CityNameEn": "Shantou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2030",
+            "CityCode": "2030",
+            "CityNameCn": "韶关",
+            "CityNameEn": "Shaoguan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1800",
+            "CityId": "1807",
+            "CityCode": "1807",
+            "CityNameCn": "十堰",
+            "CityNameEn": "Shiyan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1500",
+            "CityId": "1508",
+            "CityCode": "1508",
+            "CityNameCn": "上饶市",
+            "CityNameEn": "Shangrao",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1131",
+            "CityCode": "1131",
+            "CityNameCn": "宿迁",
+            "CityNameEn": "Suqian",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1721",
+            "CityCode": "1721",
+            "CityNameCn": "商丘",
+            "CityNameEn": "Shangqiu",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2040",
+            "CityCode": "2040",
+            "CityNameCn": "汕尾",
+            "CityNameEn": "Shanwei",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1500",
+            "CityId": "1523",
+            "CityCode": "1523",
+            "CityNameCn": "三清山（上饶）",
+            "CityNameEn": "sanqingshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0300",
+            "CityId": "0301",
+            "CityCode": "0301",
+            "CityNameCn": "天津",
+            "CityNameEn": "Tianjin",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "3400",
+            "CityId": "3401",
+            "CityCode": "3401",
+            "CityNameCn": "台北（台湾）",
+            "CityNameEn": "Taipei（Taiwan）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0600",
+            "CityId": "0601",
+            "CityCode": "0601",
+            "CityNameCn": "太原",
+            "CityNameEn": "Taiyuan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1614",
+            "CityCode": "1614",
+            "CityNameCn": "泰安",
+            "CityNameEn": "Taian",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0506",
+            "CityCode": "0506",
+            "CityNameCn": "唐山",
+            "CityNameEn": "Tangshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1224",
+            "CityCode": "1224",
+            "CityNameCn": "台州",
+            "CityNameEn": "Taichow",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2037",
+            "CityCode": "2037",
+            "CityNameCn": "台山",
+            "CityNameEn": "Taishan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1115",
+            "CityCode": "1115",
+            "CityNameCn": "泰州",
+            "CityNameEn": "Taizhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2500",
+            "CityId": "2512",
+            "CityCode": "2512",
+            "CityNameCn": "腾冲",
+            "CityNameEn": "Tengchong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2800",
+            "CityId": "2805",
+            "CityCode": "2805",
+            "CityNameCn": "天水",
+            "CityNameEn": "Tianshui",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1121",
+            "CityCode": "1121",
+            "CityNameCn": "同里（吴江）",
+            "CityNameEn": "Tongli",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1315",
+            "CityCode": "1315",
+            "CityNameCn": "铜陵",
+            "CityNameEn": "Tongling",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1120",
+            "CityCode": "1120",
+            "CityNameCn": "太仓（苏州）",
+            "CityNameEn": "Taicang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1263",
+            "CityCode": "1263",
+            "CityNameCn": "桐乡",
+            "CityNameEn": "Tongxiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1247",
+            "CityCode": "1247",
+            "CityNameCn": "桐庐（杭州）",
+            "CityNameEn": "Tonglu（HangZhou）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0700",
+            "CityId": "0706",
+            "CityCode": "0706",
+            "CityNameCn": "通辽",
+            "CityNameEn": "Tongliao",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1800",
+            "CityId": "1801",
+            "CityCode": "1801",
+            "CityNameCn": "武汉",
+            "CityNameEn": "Wuhan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1105",
+            "CityCode": "1105",
+            "CityNameCn": "无锡",
+            "CityNameEn": "Wuxi",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "3100",
+            "CityId": "3101",
+            "CityCode": "3101",
+            "CityNameCn": "乌鲁木齐",
+            "CityNameEn": "Urumqi",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1293",
+            "CityCode": "1293",
+            "CityNameCn": "乌镇（桐乡）",
+            "CityNameEn": "wuzhen",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1603",
+            "CityCode": "1603",
+            "CityNameCn": "潍坊",
+            "CityNameEn": "Weifang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1605",
+            "CityCode": "1605",
+            "CityNameCn": "威海",
+            "CityNameEn": "Weihai",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1203",
+            "CityCode": "1203",
+            "CityNameCn": "温州",
+            "CityNameEn": "Wenzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1300",
+            "CityId": "1304",
+            "CityCode": "1304",
+            "CityNameCn": "芜湖",
+            "CityNameEn": "Wuhu",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1500",
+            "CityId": "1520",
+            "CityCode": "1520",
+            "CityNameCn": "婺源（上饶）",
+            "CityNameEn": "WuYuan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1400",
+            "CityId": "1404",
+            "CityCode": "1404",
+            "CityNameCn": "武夷山",
+            "CityNameEn": "Wuyishan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2700",
+            "CityId": "2710",
+            "CityCode": "2710",
+            "CityNameCn": "华山（渭南华阴市）",
+            "CityNameEn": "Huashan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0600",
+            "CityId": "0604",
+            "CityCode": "0604",
+            "CityNameCn": "五台山（忻州）",
+            "CityNameEn": "Wutaishan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1800",
+            "CityId": "1831",
+            "CityCode": "1831",
+            "CityNameCn": "武当山（十堰）",
+            "CityNameEn": "Wudangshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1114",
+            "CityCode": "1114",
+            "CityNameCn": "吴江（苏州）",
+            "CityNameEn": "Wujiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2100",
+            "CityId": "2108",
+            "CityCode": "2108",
+            "CityNameCn": "梧州",
+            "CityNameEn": "Wuzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        }
+    ]
+},
+{
+    "TabId": "6",
+    "Name": "XYZ",
+    "NameEn": "XYZ",
+    "CityList": [
+        {
+            "ProvinceId": "1400",
+            "CityId": "1401",
+            "CityCode": "1401",
+            "CityNameCn": "厦门",
+            "CityNameEn": "Xiamen",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2700",
+            "CityId": "2701",
+            "CityCode": "2701",
+            "CityNameCn": "西安",
+            "CityNameEn": "Xian",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "3200",
+            "CityId": "3201",
+            "CityCode": "3201",
+            "CityNameCn": "香港",
+            "CityNameEn": "HongKong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1270",
+            "CityCode": "1270",
+            "CityNameCn": "西塘（嘉善）",
+            "CityNameEn": "Xitang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1106",
+            "CityCode": "1106",
+            "CityNameCn": "徐州",
+            "CityNameEn": "XuZhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "3000",
+            "CityId": "3001",
+            "CityCode": "3001",
+            "CityNameCn": "西宁",
+            "CityNameEn": "Xining",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2500",
+            "CityId": "2507",
+            "CityCode": "2507",
+            "CityNameCn": "西双版纳",
+            "CityNameEn": "xishuangbanna",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2318",
+            "CityCode": "2318",
+            "CityNameCn": "西昌（凉山州）",
+            "CityNameEn": "Xichang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1800",
+            "CityId": "1834",
+            "CityCode": "1834",
+            "CityNameCn": "襄阳",
+            "CityNameEn": "Xiangyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2500",
+            "CityId": "2506",
+            "CityCode": "2506",
+            "CityNameCn": "香格里拉（迪庆州）",
+            "CityNameEn": "Xianggelila",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1704",
+            "CityCode": "1704",
+            "CityNameCn": "新乡",
+            "CityNameEn": "Xinxiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1800",
+            "CityId": "1820",
+            "CityCode": "1820",
+            "CityNameCn": "咸宁",
+            "CityNameEn": "Xianning",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1253",
+            "CityCode": "1253",
+            "CityNameCn": "象山（宁波）",
+            "CityNameEn": "Xiangshan（ningbo）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1720",
+            "CityCode": "1720",
+            "CityNameCn": "信阳",
+            "CityNameEn": "Xinyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2700",
+            "CityId": "2703",
+            "CityCode": "2703",
+            "CityNameCn": "咸阳",
+            "CityNameEn": "Xianyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0505",
+            "CityCode": "0505",
+            "CityNameCn": "邢台",
+            "CityNameEn": "Xingtai",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1900",
+            "CityId": "1906",
+            "CityCode": "1906",
+            "CityNameCn": "湘潭",
+            "CityNameEn": "Xiangtan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0807",
+            "CityCode": "0807",
+            "CityNameCn": "兴城",
+            "CityNameEn": "Xingcheng",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1713",
+            "CityCode": "1713",
+            "CityNameCn": "许昌",
+            "CityNameEn": "Xuchang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2400",
+            "CityId": "2427",
+            "CityCode": "2427",
+            "CityNameCn": "西江苗寨（黔东南州）",
+            "CityNameEn": "xijiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1104",
+            "CityCode": "1104",
+            "CityNameCn": "扬州",
+            "CityNameEn": "Yangzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1604",
+            "CityCode": "1604",
+            "CityNameCn": "烟台",
+            "CityNameEn": "Yantai",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2100",
+            "CityId": "2106",
+            "CityCode": "2106",
+            "CityNameCn": "阳朔（桂林）",
+            "CityNameEn": "Yangshuo",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2900",
+            "CityId": "2901",
+            "CityCode": "2901",
+            "CityNameCn": "银川",
+            "CityNameEn": "Yinchuan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1800",
+            "CityId": "1803",
+            "CityCode": "1803",
+            "CityNameCn": "宜昌",
+            "CityNameEn": "Yichang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2020",
+            "CityCode": "2020",
+            "CityNameCn": "阳江",
+            "CityNameEn": "Yangjiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0800",
+            "CityId": "0815",
+            "CityCode": "0815",
+            "CityNameCn": "营口",
+            "CityNameEn": "yingkou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2308",
+            "CityCode": "2308",
+            "CityNameCn": "宜宾",
+            "CityNameEn": "Yibin",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1900",
+            "CityId": "1904",
+            "CityCode": "1904",
+            "CityNameCn": "岳阳",
+            "CityNameEn": "Yueyang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1109",
+            "CityCode": "1109",
+            "CityNameCn": "宜兴（无锡）",
+            "CityNameEn": "Yixing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1116",
+            "CityCode": "1116",
+            "CityNameCn": "盐城",
+            "CityNameEn": "Yancheng",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2306",
+            "CityCode": "2306",
+            "CityNameCn": "雅安",
+            "CityNameEn": "Yaan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1275",
+            "CityCode": "1275",
+            "CityNameCn": "余姚（宁波）",
+            "CityNameEn": "Yuyao（ningbo）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2700",
+            "CityId": "2705",
+            "CityCode": "2705",
+            "CityNameCn": "延安",
+            "CityNameEn": "Yanan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0900",
+            "CityId": "0904",
+            "CityCode": "0904",
+            "CityNameCn": "延吉",
+            "CityNameEn": "Yanji",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1500",
+            "CityId": "1509",
+            "CityCode": "1509",
+            "CityNameCn": "宜春",
+            "CityNameEn": "Yichun（Jiangxi）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2100",
+            "CityId": "2104",
+            "CityCode": "2104",
+            "CityNameCn": "玉林",
+            "CityNameEn": "Yulin",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2700",
+            "CityId": "2709",
+            "CityCode": "2709",
+            "CityNameCn": "榆林",
+            "CityNameEn": "Yulin（Shaanxi）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1266",
+            "CityCode": "1266",
+            "CityNameCn": "雁荡山（温州）",
+            "CityNameEn": "Yandangshan（wenzhou）",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0600",
+            "CityId": "0605",
+            "CityCode": "0605",
+            "CityNameCn": "运城",
+            "CityNameEn": "Yuncheng",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1700",
+            "CityId": "1701",
+            "CityCode": "1701",
+            "CityNameCn": "郑州",
+            "CityNameEn": "Zhengzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2004",
+            "CityCode": "2004",
+            "CityNameCn": "珠海",
+            "CityNameEn": "Zhuhai",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1200",
+            "CityId": "1245",
+            "CityCode": "1245",
+            "CityNameCn": "舟山",
+            "CityNameEn": "Zhoushan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1900",
+            "CityId": "1903",
+            "CityCode": "1903",
+            "CityNameCn": "张家界",
+            "CityNameEn": "Zhangjiajie",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2011",
+            "CityCode": "2011",
+            "CityNameCn": "中山",
+            "CityNameEn": "Zhongshan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2013",
+            "CityCode": "2013",
+            "CityNameCn": "肇庆",
+            "CityNameEn": "Zhaoqing",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1606",
+            "CityCode": "1606",
+            "CityNameCn": "淄博",
+            "CityNameEn": "Zibo",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1108",
+            "CityCode": "1108",
+            "CityNameCn": "镇江",
+            "CityNameEn": "Zhenjiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2000",
+            "CityId": "2014",
+            "CityCode": "2014",
+            "CityNameCn": "湛江",
+            "CityNameEn": "Zhanjiang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1126",
+            "CityCode": "1126",
+            "CityNameCn": "周庄（昆山）",
+            "CityNameEn": "Zhouzhuang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1600",
+            "CityId": "1608",
+            "CityCode": "1608",
+            "CityNameCn": "枣庄",
+            "CityNameEn": "Zaozhuang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "0500",
+            "CityId": "0513",
+            "CityCode": "0513",
+            "CityNameCn": "张家口",
+            "CityNameEn": "Zhangjiakou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1900",
+            "CityId": "1902",
+            "CityCode": "1902",
+            "CityNameCn": "株洲",
+            "CityNameEn": "Zhuzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1100",
+            "CityId": "1111",
+            "CityCode": "1111",
+            "CityNameCn": "张家港（苏州）",
+            "CityNameEn": "Zhangjiagang",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2400",
+            "CityId": "2402",
+            "CityCode": "2402",
+            "CityNameCn": "遵义",
+            "CityNameEn": "Zunyi",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "1400",
+            "CityId": "1408",
+            "CityCode": "1408",
+            "CityNameCn": "漳州",
+            "CityNameEn": "Zhangzhou",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2400",
+            "CityId": "2415",
+            "CityCode": "2415",
+            "CityNameCn": "镇远（黔东南州）",
+            "CityNameEn": "zhengyuan",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2900",
+            "CityId": "2904",
+            "CityCode": "2904",
+            "CityNameCn": "中卫",
+            "CityNameEn": "zhongwei",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2300",
+            "CityId": "2305",
+            "CityCode": "2305",
+            "CityNameCn": "自贡",
+            "CityNameEn": "Zigong",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        },
+        {
+            "ProvinceId": "2800",
+            "CityId": "2804",
+            "CityCode": "2804",
+            "CityNameCn": "张掖",
+            "CityNameEn": "Zhangye",
+            "CityThreeSign": "",
+            "CityType": "hotel",
+            "OldEnglishName": ""
+        }
+    ]
+}

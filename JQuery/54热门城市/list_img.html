@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>选择列表</title>
+        <style>
+            *{margin:0;padding: 0;list-style: none;}
+            .mian_list{margin: 30px 50px;overflow: hidden;}
+            input{outline: none;}
+            .list_city{
+                width: 400px;
+                height: 40px;
+                border:solid 1px green; 
+            }
+            .list_city li{
+                float: left;
+                padding: 0 10px;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                height: 40px;
+
+            }
+            .wrapin_ul{display: none;position: relative;}
+            .conten_view{overflow: hidden;clear: both;width: 400px;}
+            .conten_view p{padding: 6px 15px;}
+            .conten_view span{cursor: pointer;padding-right: 10px;line-height: 35px;}
+            .add{
+                position: absolute;
+                border-bottom: solid 3px #86880c;
+                width: 55px;
+                left: 0;
+                top: 39px;
+              }
+
+        </style>
+</head>
+<body>
+
+
+  
+   <div class="mian_list">
+          <input type="text" id="userid">
+          <div class="wrapin_ul">
+             <ul class="list_city">
+             </ul>
+             <div class="add"></div>
+             <div class="conten_view">
+
+             </div>
+          </div>
+   </div>
+
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/data.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#userid").on("focus",function(){
+        $(".wrapin_ul").show();
+    });
+    for(var i in data.city){
+        $.each(data.city[i],function(key,arr){
+            $("<li>"+key+"</li>").appendTo(".list_city");
+            if($(".list_city li").eq(0).text()=="hotlist"){
+                $(".list_city li").eq(0).text("热门");
+            }
+        })
+    }
+
+    function  hotlist(){
+        var  sp2="";
+        $.each(data.city[0],function(i,val){
+            $.each(val,function(j,vall){
+                sp2+="<span>"+vall.display+"</span>";
+            });
+            $(".conten_view").html("<h3>热门:</h3><p>"+sp2+"</p>");
+        });
+    }
+    hotlist();
+
+    $(".list_city").on("click","li",function(){
+        $(".conten_view").html("");
+        var ind=$(this).index(),w=$(".add").width();
+        $(".add").stop().animate({"left":ind*w});
+
+        var  strall=$(this).text();
+        var  div,inner="";
+
+        if(ind==0){
+            hotlist();
+        }else{
+            for(var i=0;i<strall.length;i++){
+                var litxt=strall[i];
+                var spAll="";
+                div=$("<div></div>");
+                inner="<h3>"+litxt+":</h3><p></p>";
+                div.html(inner);
+                div.appendTo(".conten_view");
+
+                $.each(data.city[ind],function(i,val){
+                    $.each(val,function(j,vall){
+                       if(vall.data.charAt(0)==litxt){
+                         spAll+="<span>"+vall.display+"</span>";
+                       }
+                    });
+                });
+                $(".conten_view div").eq(i).children("p").html(spAll);
+            }
+        }
+    });
+
+
+
+
+
+
+       
+       
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         /*$("#userid").on("focus",function(){
+            $(".wrapin_ul").show();
+            var  lastind=$(".list_city li").eq(0).index();
+            init(lastind);
+         }); 
+
+         $(".list_city").on("click","li",function(){
+                $(".conten_view").html("");
+                var  ind=$(this).index();
+                var  add=$(this).parent("ul").next("div");
+                var  w=add.width();
+                add.stop().animate({'left':ind*w})
+                
+                init(ind);
+         });
+
+         function  init(ind){
+                for(var i in data.dataarr[ind]){
+                    var  list_sp=$("<p></p>");
+                    $.each(data.dataarr[ind][i],function(j,val){
+                      list_sp.append("<span>"+val+"</span>");
+                    });
+                    $("<b>"+i+"</b>").prependTo(list_sp);
+                    $(".conten_view").append(list_sp);
+                }
+         }
+         $(".conten_view").on("click","span",function(){
+             var  vall=$(this).text();
+             $(this).addClass("bg").siblings().removeClass("bg").end().parent().siblings().children("span").removeClass("bg");
+             $("#userid").val(vall);
+             $(".wrapin_ul").hide();
+         });
+*/
+        /* var data={"dataarr":[
+                    {"hot":["澳门","安顺市","北京","南京","大理","青岛","秦皇岛",]},
+                    {"A":["澳门","安顺市","鞍山","安庆安吉"],
+                     "B":["北京","北戴河"],
+                     "C":["成都","重庆","长沙"],
+                     "D":["大连","东莞","大理"]
+                    },
+                    {"E":["峨眉山","恩施","鄂尔多斯"],
+                     "F":["福州","佛山"],
+                     "G":["广州","桂林"],
+                     "H":["杭州","哈尔滨"],
+                   },
+                   { "J":["济南","九寨沟"],
+                     "K":["昆明","开封"],
+                     "L":["丽江（含束河）","兰州"],
+                     "N":["南京","宁波","南昌","南宁"],
+                     "M":["绵阳","梅州马鞍山"]
+                   },
+                   {
+                     "P":["平遥（晋中）","蓬莱（烟台）"],
+                     "Q":["青岛","秦皇岛","千岛湖（杭州）"],
+                     "R":["日照荣成（威海）","瑞安（温州）"],
+                     "S":["上海","深圳","苏州"]
+                  },
+                  {"T":["天津","台北（台湾）","太原"],
+                     "W":["武汉","无锡","乌鲁木齐乌镇（桐乡）"],
+                     "X":["厦门","西安","香港"]
+                  },
+                  {
+                   "Y":["扬州","烟台","阳朔"],
+                   "Z":["郑州","珠海","舟山","张家界"]
+                  }
+          ]};*/
+
+      });       
+ 
+</script>
+</body>
+</html>

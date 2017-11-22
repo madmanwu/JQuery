@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">123</div>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){
+			bb=document.getElementById("#box")
+			function cssWen(obj){
+				if(typeof obj=="object"){
+					for(var i in obj){
+						console.log(obj[i])
+					}
+				}else{
+					var len=arguments.length;
+					if(len==1){
+						//获取
+						bb.style[obj]
+						return this;
+					}else{
+						//设置
+						
+					}
+				}
+			}
+			//cssWen("background","red")
+			cssWen("background")
+			//cssWen({"background":"red"})
+		})
+	</script>
+</body>
+</html>

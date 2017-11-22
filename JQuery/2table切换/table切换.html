@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0 auto;
+			padding: 0;
+			list-style: none;
+		}
+		#box{
+			width: 400px;
+			height: 500px;
+			border: 1px solid #000;
+		}
+		#list{
+			width: 398px;
+			height: 30px;
+            margin-left:103px; 
+		}
+		#list li{
+			width: 97px;
+			height: 30px;
+			float: left;
+			border: 1px solid red;
+			text-align: center;
+			line-height: 30px;
+		}
+		.active{
+			background: #000;
+			color: red;
+		}
+		#box1{
+			width: 398px;
+			height: 469px;
+			overflow: hidden;
+		}
+		#box1 div{
+			line-height: 469px;
+			text-align: center;
+		}
+		.bg{
+			background: red;
+			color: #000;
+		}
+        #box span{
+            position: relative;
+            top: 20px;left: 12px;
+            color: #f00;
+        }
+	</style>
+</head>
+<body>
+	<div id="box">
+	    <span>风云榜</span>
+		<ul id="list">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<div id="box1">
+			<div class="bg">111111</div>
+			<div>22222</div>
+			<div>33333</div>
+		</div>
+	</div>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+	$(function(){
+		$("#list li").on("click",function(){
+			var i = $(this).index();
+			$(this).addClass("active").siblings().removeClass("active");
+			$("#box1 div").eq(i).show().addClass("bg").siblings().hide();
+		})
+	})
+</script>
+</html>

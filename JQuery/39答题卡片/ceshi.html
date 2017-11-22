@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			margin: 50px auto;
+		}
+		#box,.small_box{
+			width: 500px;
+			height: 300px;
+			box-shadow: 0px 0px 8px 8px #ccc;
+			overflow: hidden;
+		}
+		#box div h3{
+			height: 150px;
+			line-height: 150px;
+			font-size: 30px;
+			text-align: center;
+		}
+		#start{
+			width: 150px;
+			height: 32px;
+			background: green;
+			color: white;
+			font-size: 28px;
+			border: 0;
+			text-align: center;
+			margin-left: 175px;
+			border-radius: 3px;
+		}
+		.small_box button{
+			width: 400px;
+			line-height: 20px;
+			background: #ccc;
+			margin-top: 10px;
+			border-radius: 5px;
+			border: 0;
+		}
+		.small_box p{
+			height: 30px;
+			line-height: 30px;
+
+		}
+		.small_box button.bg{
+			background: skyblue;
+		}
+		.small_box button.next,.small_box button.prev,#finied{
+			background: green;
+			width:50px;
+			height:20px;
+			float:right;
+			margin-right:100px;
+		}
+		.small_box button.prev{
+			background: skyblue;
+		}
+		#tip{
+			display: none;
+			height: 50px;
+			width: 500px;
+			margin:  20px auto;
+		}
+		#tip button{
+			width: 50px;
+			height: 30px;
+			margin: 10px auto;
+			position: relative;
+			margin-left: 50px;
+		}
+		#tip button.false{
+			background: green;
+		}
+		#tip button.true{
+			background: red;
+		}
+		#tip p{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 0;
+			top: 30px;
+			display: none;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="list">
+		<div class="small_box box_1">
+			<h3>请认真完成测试题，你准备好了吗？</h3>
+			<button id="start">start</button>
+		</div>
+		<div class="small_box">
+			<p>Jquery是什么？</p>
+			<button class="con">javascript库</button><br>
+			<button class="con">Css库</button><br>
+			<button class="con">PHP框架</button><br>
+			<button class="con">以上都不是</button><br>
+			<button class="next" style="width:50px;height:20px;float:right;margin-right:100px;">下一题</button>
+		</div>
+		<div class="small_box">
+			<p>找出不同类的一项</p>
+			<button class="con">写字台</button><br>
+			<button class="con">沙发</button><br>
+			<button class="con">电视</button><br>
+			<button class="con">桌布</button><br>
+			<button class="prev" style="width:50px;height:20px;float:left;margin-left:30px;">上一题</button>
+			<button class="next" style="width:50px;height:20px;float:right;margin-right:100px;">下一题</button>
+		</div>
+		<div class="small_box">
+			<p>国土面积最大的国家是：</p>
+			<button class="con">美国</button><br>
+			<button class="con">中国</button><br>
+			<button class="con">俄罗斯</button><br>
+			<button class="con">加拿大</button><br>
+			<button class="prev" style="width:50px;height:20px;float:left;margin-left:30px;">上一题</button>
+			<button class="next" style="width:50px;height:20px;float:right;margin-right:100px;">下一题</button>
+		</div>
+		<div class="small_box">
+			<p>月亮距离地球多远</p>
+			<button class="con">18万公里</button><br>
+			<button class="con">38万公里</button><br>
+			<button class="con">100万公里</button><br>
+			<button class="con">180万公里</button><br>
+			<button class="prev" style="width:50px;height:20px;float:left;margin-left:30px;">上一题</button>
+			<button id="finied">完成</button>
+		</div>
+		</div>
+	</div>
+	<div id="tip"></div>
+	<script src="jquery1.7.js"></script>
+	<script>
+		$(function(){
+			$("#start").on("click",function(){
+				$(this).parent().hide()
+			})
+		var ind=0;
+		var len=$(".small_box").length;
+		var h=$(".small_box").height();
+		$(".next").on("click",function(){
+			ind++;
+			if(ind>len-1){
+				ind=0;
+			}
+			$("#list").css({"margin-top":-ind*h})
+		})
+		$(".prev").on("click",function(){
+			ind--;
+			if(ind<0){
+				ind=len-1;
+			}
+			$("#list").css({"margin-top":-ind*h})
+		})
+		var score=0;
+		$(".con").on("click",function(){
+			$(this).addClass("bg").siblings().removeClass("bg");
+			if($(this).hasClass("bg")){
+				var that=$(this);
+					inde=$(this).parent().index();
+				
+				if(that.text()=="javascript库" || that.text()=="桌布" || that.text()=="俄罗斯" || that.text()=="38万公里")
+				{
+					$("<button>"+"#"+inde+"√"+"</button>").addClass("true").appendTo("#tip");
+					score+=25;
+				}
+				else{
+					$("<button>"+"#"+inde+"×"+"</button>").addClass("false").appendTo("#tip");
+				}
+			}
+		})
+
+		$("#finied").on("click",function(){
+				$("#tip").show();
+				if(score<=60){
+					alert("您太可怜了！"+"\n"+"您的分数是:"+score)
+				}else{
+					alert("恭喜你，及格了"+"\n"+"您的分数是:"+score)
+				}
+		})
+
+		$("#tip").on("mouseover","button",function(){
+			var i=$(this).index();
+			var txt=$(".small_box").not(".box_1").eq(i).text();
+			console.log(txt)
+			var str=$("<p></p>").text(txt).appendTo($(this));
+			$(this).children("p").show();
+		})
+
+		$("#tip").on("mouseout","button",function(){
+			$(this).children("p").hide();
+		})
+
+
+
+
+
+		})
+	</script>
+</body>
+</html>

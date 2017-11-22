@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	#box{width:900px;display: flex;}
+	#box>li{flex:1;text-align: center;height:20px;background:blue;}
+	.list li{width:300px;display:none;}
+	</style>
+</head>
+<body>
+	<ul id="box">
+		<li>
+			新闻
+			<ul class="list">
+				<li>wanhaha</li>
+				<li>wanhaha</li>
+				<li>wanhaha</li>
+				<li>wanhaha</li>
+			</ul>
+		</li>
+		<li>
+			新闻
+			<ul class="list">
+				<li>wanhaha</li>
+				<li>wanhaha</li>
+				<li>wanhaha</li>
+				<li>wanhaha</li>
+			</ul>
+		</li>
+		<li>
+			新闻
+			<ul class="list">
+				<li>wanhaha</li>
+				<li>wanhaha</li>
+				<li>wanhaha</li>
+				<li>wanhaha</li>
+			</ul>
+		</li>
+	</ul>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){
+			$("#box>li").hover(function(){
+				//$(this).find("li").show(1000)
+				$(this).find("li").stop().slideDown(1000)
+			},function(){
+				$(this).find("li").stop().slideUp(1000)
+			})
+		})
+	</script>
+</body>
+</html>

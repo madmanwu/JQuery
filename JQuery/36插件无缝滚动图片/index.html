@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	#box{width:400px;height:400px;margin:100px auto;overflow:hidden;position: relative;}
+	#list{width:1600px;height:400px;}
+	#list li{width:400px;height:400px;float:left;}
+	#list li img{width:400px;height:400px;}
+	#word{width:120px;height:30px;position: absolute;left:150px;bottom:40px;}
+	#word li{width:30px;height:30px;border-radius: 50%;float:left;text-align: center;line-height: 30px;background:red;}
+	#word li.on{background:blue;}
+	button{position: absolute;top:45%;font-size: 30px}
+	#left{left:0;}
+	#right{right:0;}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul id="list">
+			<li><img src="img/temp_img01.jpg" alt=""></li>
+			<li><img src="img/temp_img02.jpg" alt=""></li>
+			<li><img src="img/temp_img03.jpg" alt=""></li>
+			<li><img src="img/temp_img06.jpg" alt=""></li>
+		</ul>
+		<ol id="word">
+			<li class="on">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+		<button id="left"><</button>
+		<button id="right">></button>
+	</div>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="jquery.more.js"></script>
+	<script>
+		$(function(){
+			$("#list").start({
+				type:"click",
+				direction:"left",
+				time:"600",
+				prev:"#left",
+				nxt:"#right",
+				timer:"1000"
+			})
+		})
+	</script>
+</body>
+</html>

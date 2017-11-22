@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="checkbox"><span>太阳</span>
+	<input type="checkbox"><span>月亮</span>
+	<input type="checkbox"><span>星星</span>
+	<input type="checkbox"><span>彩虹</span>
+	<input type="checkbox"><span>云彩</span>
+	<br>
+	<button>全选</button>
+	<button>反选</button>
+	<button>全不选</button>
+	<button>提交</button>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+	$(function(){
+		$("button").click(function(){
+			switch(this.innerHTML){
+				case "全选":
+				$("input").prop("checked",true);
+				break;
+				case "反选":
+				$("input").each(function(i,val){
+					val.checked = !val.checked;
+				});
+				break;
+				case "全不选":
+				$("input").prop("checked",false);
+				break;
+				case "提交":
+				$("input").each(function(i,val){
+					console.log(val.checked);
+				});
+				break;
+			}
+		})
+	})
+</script>
+</html>

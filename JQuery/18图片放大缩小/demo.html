@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 100px auto;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 1200px;
+            height: 150px;
+        }
+        li{
+            width: 300px;
+            height: 150px;
+            float: left;
+            position: relative;
+        }
+        li img{
+            width: 300px;
+            height: 150px;
+            position: absolute;
+            left: 0;top: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li><img src="1.jpg" alt=""></li>
+        <li><img src="2.jpg" alt=""></li>
+        <li><img src="3.jpg" alt=""></li>
+        <li><img src="4.jpg" alt=""></li>
+    </ul>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+    $(function(){
+        var bei = 2;
+        var w = $("ul li>img").width(),
+            h = $("ul li>img").height();
+        
+        $("ul li>img").hover(function(){
+            $(this).css("z-index",3).stop().animate({
+                "width":w*bei,
+                "height":h*bei,
+                "margin-left":-(w*bei-w)/2,
+                "margin-top":-(h*bei-h)/2,
+            })
+        },function(){
+           $(this).css("z-index",1).stop().animate({
+                "width":w,
+                "height":h,
+                "margin-left":0,
+                "margin-top":0,
+            }) 
+        })
+    })
+</script>
+</html>

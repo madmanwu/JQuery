@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	ul{width:600px;height:600px;margin:60px auto;}
+	ul li{width:200px;height:200px;float:left;}
+	ul li img{width:200px;height:200px;position: absolute;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img src="img/1.jpg" alt=""></li>
+		<li><img src="img/2.jpg" alt=""></li>
+		<li><img src="img/3.jpg" alt=""></li>
+		<li><img src="img/4.jpg" alt=""></li>
+		<li><img src="img/5.jpg" alt=""></li>
+		<li><img src="img/6.jpg" alt=""></li>
+		<li><img src="img/7.jpg" alt=""></li>
+		<li><img src="img/8.jpg" alt=""></li>
+		<li><img src="img/9.jpg" alt=""></li>
+	</ul>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var num=1.5,
+				imgW=$("ul img").width(),
+				imgH=$("ul img").height()
+				
+			$("ul img").hover(function(){
+				var last_imgW=imgW*num,
+					last_imgH=imgH*num,
+					l=(last_imgW-imgW)/2,
+					T=(last_imgH-imgH)/2
+				$(this).css({"width":last_imgW,"height":last_imgH,"z-index":9,"margin-left":-l,"margin-top":-T})
+			},function(){
+				$(this).css({"width":imgW,"height":imgH,"z-index":1,"margin-left":0,"margin-top":0})
+			})
+		})
+	</script>
+</body>
+</html>

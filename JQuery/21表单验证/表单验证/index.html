@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="ElongLogin" class="formbox">   
+        <div class="inputbox login_id">
+              <span class="icon"></span>
+              <input class="blur" type="text" id="UserName" placeholder="用户名/卡号/手机号/邮箱">
+              <div class="input_tip" name="input_error_tip" style="display: none;">    您输入的用户名和密码不匹配，请重新输入！
+              </div>
+        </div>
+        <div class="inputbox login_pw" style="" id="input_password">
+            <span class="icon"></span>
+            <input class="blur" type="password" method="PassWord" id="PassWord">
+            <div class="input_tip" name="input_error_tip" style="display: none;">您输入的密码和用户名不匹配，请重新输入！
+            </div>
+        </div>
+	  <div class="inputbox">
+	  	  <input class="test" type="text" placeholder="验证码" id="ValidateCode">
+	  	  <p class="test-wrap">QNMP</p>
+	  	  <a href="#?" id="ValidateHref">换一张</a>
+	  	  <div class="input_tip input_tip_yzm" id="validate_result" style="display: none;">您输入的验证码有误</div>
+	  </div>
+        <a class="loginbtn" href="#?" usable="true" method="LoginSubmit">登录</a>
+    </div>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       var users = [
+           {
+           	   username:"张三",
+           	   password:"zhangsan123"
+           },
+           {
+           	   username:"李四",
+           	   password:"123987li"
+           },
+           {
+           	   username:"王五",
+           	   password:"wang_wu55"
+           }
+       ] 
+    </script>
+    <script type="text/javascript">
+     $(function(){
+         //用户名
+         var sum=0,sum1=0,sum2=0,j=0
+            $("#UserName").on("blur",function(){  
+             $.each(users,function(i){
+                 if($("#UserName").val()==users[i].username){
+                  $("#UserName").next(".input_tip").hide()
+                  j=i
+                  sum=0
+                  $("#PassWord").on("blur",function(){
+                    console.log(j)
+                    if($("#PassWord").val()==users[j].password){
+                      $("#PassWord").next().hide()
+                      sum1=0
+                      return false;
+                    }else{
+                      $("#PassWord").next().show()
+                      sum1=1
+                    }
+                  })
+                  return false;
+                 }else{
+                  $("#UserName").next(".input_tip").show()
+                  sum=1
+                 }
+             })
+            })
+            //验证码
+            var arr=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+            $("#ValidateHref").on("click",function(){
+              var brr=[],str=""
+              for(var i=0;i<4;i++){
+                var random=Math.floor(Math.random()*26)
+                if(brr.indexOf(arr[random])==-1){//去重有问题
+                  brr.push(arr[random])
+                  str=brr.join("")
+                }
+              }
+              $(".test-wrap").text(str)
+              $("#ValidateCode").on("blur",function(){
+                if($(this).val()==$(".test-wrap").text()){
+                  $("#validate_result").hide()
+                  sum2=0
+                }else{
+                  $("#validate_result").show()
+                  sum2=1
+                }
+              })
+            })
+            $(".loginbtn").on("click",function(){
+              var name=$("#UserName").val(),
+                  pas=$("#PassWord").val()
+              if(sum==0&&sum1==0&&sum2==0){
+                location.href=escape("login.html?userName="+name+"&password="+pas)
+              }
+            })
+     })
+    </script>
+</body>
+</html>

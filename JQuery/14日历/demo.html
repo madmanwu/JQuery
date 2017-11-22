@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        #box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        #list{
+            list-style: none;
+            width: 90px;
+            height: 500px;
+            border: 1px solid #000;
+            position: absolute;
+            left: 0;top: 0;
+        }
+        #list li{
+            width: 90px;
+            height: 70px;
+            border: 1px solid #000;
+            border-bottom: none;
+            line-height: 70px;
+            text-align: center;
+            background: #666;
+        }
+        #list .act{
+            background: #FFF;
+            color: #666;
+        }
+        #list li:nth-child(2){
+            background: #FFF;
+            color: #666;
+        }
+        #wrap{
+            width: 406px;
+            height: 500px;
+            position: absolute;
+            right: 0;top: 0;
+        }
+        #lis{
+            width: 406px;
+            height: 70px;
+            list-style: none;
+            border-bottom: 1px solid #CCC;
+            position: relative;
+        }
+        #lis li{
+            float: left;
+            width: 80px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+        }
+        .active{
+            border-bottom: 2px solid #0f0;
+            color: #0f0;
+        }
+        #lis li:nth-child(2){
+            margin-left: 13px;
+        }
+        #lis span{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background: #666;
+            line-height: 20px;
+            text-align: center;
+            color: #FFF;
+            font-weight: bold;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;top: 0;
+        }
+        #lis1{
+            list-style: none;
+            position: relative;
+        }
+        #lis1 li{
+            float: left;
+            margin-top: 5px;
+            position: absolute;
+            left: 0;top: 0;
+            margin-left: 5px;
+            line-height: 40px;
+        }
+        #lis1 li:nth-child(2){
+            margin-left: 110px;
+        }
+        #head{
+            width: 406px;
+            height: 50px;
+            margin-top: 50px;
+            line-height: 50px;
+            margin-bottom: -50px;
+        }
+        #head p{
+            width: 170px;
+            height: 34px;
+            border: 1px solid #CCC;
+            float: left;
+            line-height: 30px;
+            margin-left: 5px;
+            background: #FFF;
+            color: #CCC;
+        }
+        #head span{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: skyblue;
+            float: left;
+            margin-top: 10px;
+            margin-left: 11px;
+            margin-right: 7px;
+            border-radius: 50%;
+            line-height: 25px;
+            text-align: center;
+            color: #FFF;
+        }
+        #head p:nth-child(2){
+            
+        }
+        #head p>input{
+            width: 100px;
+            height: 30px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        #lis2{
+            width: 406px;
+            height: 50px;
+            margin-top: 50px;
+        }
+        #lis2 p>input{
+            width: 30px;
+        }
+        #lis2 p{
+            float: left;
+            height: 31px;
+            border: 1px solid #CCC;
+            padding-left: 5px;
+        }
+        #lis2 p>input{
+            height: 27px;
+            border: none;
+            outline: none;
+        }
+        #lis2 p>select{
+            height: 30px;
+            border: none;
+            outline: none;
+        }
+        #lis2 p:first-child{
+            margin-left: 5px;
+        }
+        #lis2 p:nth-child(2){
+            margin-left: 15px;
+        }
+        #btn{
+           width: 93px;
+           height: 32px;
+           color: #FFF;
+           background: orange;
+           border: none;
+           outline: none;
+           margin-left: 15px;
+        }
+        #img img{
+            width: 400px;
+            height: 193px;
+        }
+        #lis3{
+            list-style: none;
+            width: 406px;
+            height: 30px;
+            background: #CCC;
+            font-size: 9px;
+        }
+        #lis3 li{
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            width: 90px;
+        }
+        #lis3 li:first-child{
+            margin-left: 5px;
+        }
+        #lis3 li:last-child{
+            margin-left: 25px;
+        }
+        #block{
+            width: 198px;
+            height: 23px;
+            list-style: none;
+            margin-top: 20px;
+            margin-top: 3px;
+            background: #CCC;
+        }
+        #block li{
+            float: left;
+            width: 23px;
+            height: 23px;
+            text-align: center;
+            margin: 2px;
+            line-height: 23px;
+            padding-left: 1px;
+        }
+        #block li:first-child{
+            color: orange;
+            font-weight: bold;
+        }
+        #block li:last-child{
+            color: orange;
+            font-weight: bold;
+        }
+        #none{
+            border: 1px solid #666;
+            width: 200px;
+            height: 220px;
+            position: absolute;
+            left: 810px;top: 210px;
+            display: none;
+        }
+        .act{
+           display: block;
+           position: relative;
+        }
+        #none p{
+            width: 200px;
+            height: 22px;
+            background: #0f0;
+            
+        }
+        #none p>span{
+            margin-left: 5px;
+        }
+        #none p>span:first-child{
+            display: inline-block;
+            width: 20px;
+            height: 19px;
+            border: 1px solid green;
+            text-align: center;
+            line-height: 19px;
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #none p>span:last-child{
+            margin-left: 30px;
+        }
+        #oll{
+            width: 198px;
+            height: 163px;
+            background: pink;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id="list">
+            <li>度假旅游</li>
+            <li class="act">机票</li>
+            <li>酒店</li>
+            <li>超级自由行</li>
+            <li>火车 汽车</li>
+            <li>游轮 签证</li>
+            <li>门票 玩乐</li>
+        </ul>
+        <div id="wrap">
+            <ul id="lis">
+                <li class="active">国内机票</li>
+                <li>国际机票</li>
+                <span>×</span>
+            </ul>
+            <ul id="lis1">
+                <li><input type="radio" name="sex">单程</li>
+                <li><input type="radio" name="sex" checked>往返</li>
+            </ul>
+            <div id="head">
+                <p>出发地丨<input type="text" value="北京"></p>
+                <span>换</span>
+                <p>目的地丨<input type="text" placeholder="请填写目的地"></p>
+            </div>
+            <div id="head">
+                <p class="one act">出发丨<input type="text" value="2017-05-12 周五"></p>
+                <span style="background:#FFF">换</span>
+                <p>返回丨<input type="text" value="2017-05-14 周日"></p>
+            </div>
+            <div id="lis2">
+                <p><input type="text" value="1">
+                   <select name="" id="">
+                       <option value="">成人</option>
+                   </select>
+                </p>
+                <p><input type="text" value="0">
+                   <select name="" id="">
+                       <option value="">儿童（2~12）周岁</option>
+                   </select>
+                </p>
+                <button id="btn">搜索</button>
+            </div>
+            <div id="img">
+                <img src="1.jpg" alt="">
+            </div>
+            <ul id="lis3">
+                <li>❤ 阳光行程</li>
+                <li>❤ 阳光价格</li>
+                <li>❤ 阳光服务</li>
+                <li>更多特价机票 ></li>
+            </ul>
+        </div>
+    </div>
+    <div id="none">
+        <p><span><</span> <span>2017年5月</span></p>
+        <table>
+			<thead>
+				<tr>
+					<td>日</td>
+					<td>一</td>
+					<td>二</td>
+					<td>三</td>
+					<td>四</td>
+					<td>五</td>
+					<td>六</td>
+				</tr>
+			</thead>
+			<tbody id="tbody">
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+    </div>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+    $(function(){
+        $("#list li").hover(function(){
+            $(this).toggleClass("act");
+        },function(){
+            $(this).toggleClass("act");
+        })
+        
+        $(".one").on("click",function(){
+            $("#none").show();
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑"}
+		#box{
+			position: relative;
+		}
+		#box div{font-size: 50px;text-align: center;}
+		#fs{position:fixed;right: -100px;bottom:0;display: none;}
+		#fs li{width: 220px;height: 30px;background: red;margin-bottom:3px;color: #fff;text-align:left;line-height: 30px;margin-left: 50px;text-align: center}
+		span{display: none;display: block;float: right;margin-right: 50px;}
+		#fs li b{
+			display: block;
+			width: 20px;
+			height: 20px;
+			float: right;
+			background: url(img/1.png) no-repeat;
+		}
+		 #fs li:nth-child(1) b{
+			background-position: 0px 5px;
+		}
+		 #fs li:nth-child(2) b{
+			background-position: 0px -46px;
+		}
+		 #fs li:nth-child(3) b{
+			background-position: 0px -95px;
+		}
+		 #fs li:nth-child(4) b{
+			background-position: 0 -146px;
+		}
+		 #fs li:nth-child(5) b{
+			background-position: -48px -195px;
+		}
+		 #fs li:nth-child(6) b{
+			background-position: -96px -210px;
+		}
+		#fs li:nth-child(7) b{
+			background-position: -48px -195px;
+		}
+		#fs li span{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" style="width:800px;margin:0px auto;">
+		<div style="background:red;height:800px;">1F</div>
+		<div style="background:blue;height:600px;">2F</div>
+		<div style="background:#ff0;height:900px;">3F</div>
+		<div style="background:#0f0;height:800px;">4F</div>
+		<div style="background:#0ff;height:700px;">5F</div>
+		<div style="background:yellow;height:500px;">6F</div>
+		<div style="background:green;height:900px;">7F</div>
+		<ul id="fs">
+			<li>1F<span>副食百货</span><b></b></li>
+			<li>2F<span>珠宝首饰</span><b></b></li>
+			<li>3F<span>家用电器</span><b></b></li>
+			<li>4F<span>靓丽女装</span><b></b></li>
+			<li>5F<span>精品男装</span><b></b></li>
+			<li>6F<span>餐饮服务</span><b></b></li>
+			<li>7F<span>商务会谈</span><b></b></li>
+			<li id="return">^</li>
+		</ul>
+	</div>
+	
+	<script src="jquery1.7.js"></script>
+	<script>
+		$(function(){
+			$(window).on("scroll",function(){
+				var scrT=$(window).scrollTop();
+				if(scrT>=300){
+					$("#fs").show(600);
+				}else{
+					$("#fs").hide(600);
+				}
+
+
+				var arr=[];
+				$("#box div").each(function(){
+					var top=$(this).scrollTop;
+					arr.push($(this).offset().top);
+				})
+
+				$.each(arr,function(i,val){
+					if(scrT>=val){
+						$("#fs li").eq(i).stop().animate({"margin-left":0},800).find("span").show().end().siblings().stop().animate({"margin-left":100},800).find("span").hide();
+					}
+				})
+
+				$("#return").on("click",function(){
+					$("body").stop().animate({"scrollTop":0},800);
+				})
+
+				$("#fs").on("click","li",function(){
+					var ind=$(this).index();
+					$("body").stop().animate({"scrollTop":arr[ind]},800)
+				})
+
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script src="js/jquery1.7.js"></script>
+<script>
+$(function(){
+   	var lg = 50; //有50颗星星
+   
+ 	for(var i=1;i<lg;i++){
+
+ 		var x = Math.random() * $("#box").innerWidth()+"px";
+ 		var y = Math.random() * $("#box").innerHeight()+"px";
+
+ 		$("#box").append("<span style='left:"+x+";top:"+y+"'></span>");
+ 		two();
+ 	}
+
+ 	function one(){
+
+ 		$("#box span").animate({opacity:1},50,function(){
+ 			two();
+ 		})
+ 	};
+ 	function two(){
+ 		$("#box span").animate({opacity:0},100,function(){
+ 			one();
+ 		})
+ 	}
+
+})
+</script>
+ 
+<style>
+*{margin:0px;padding: 0px;}
+#box{width:600px;height: 600px;background: rgb(0, 153, 255);position: relative;}
+#box span{width:16px;height: 21px;background:url("imgs/star.png");position: absolute;left:0px;top:0px;}
+</style>
+</head>
+<body>
+
+<div id="box"></div>
+ 
+</body>
+</html>

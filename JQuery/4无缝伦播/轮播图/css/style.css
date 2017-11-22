@@ -1,0 +1,48 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+#flash{
+    width: 980px;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+}
+.Con{
+    width: 980px;
+    height: 420px;
+    position: relative;
+}
+.scroll{
+    width: 6860px;
+    height: 420px;
+}
+#but{
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;left: 390px;
+    z-index: 999999;
+}
+#but span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background: blue;
+}
+.left{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    cursor: pointer;
+}
+.right{
+    position: absolute;
+    top: 40%;
+    right: 0;
+    cursor: pointer;
+}
+.active{
+    background: pink;
+}

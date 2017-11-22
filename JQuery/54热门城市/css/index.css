@@ -1,0 +1,62 @@
+@import url(reset.css);
+.box {
+  background: #000;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.list {
+  background: red;
+  width: 10px;
+  height: 10px;
+}
+
+/* zsdgsdg */
+/* header{
+	width: 10px;
+	height: 20px;
+	li{
+		line-height: 50px;
+		background: #fff;
+		color: #000;
+		a{
+			text-decoration: none;
+			display: block;
+			&:hover{
+				background:green;
+			};
+		}
+	}
+} */
+.list_li {
+  background: blue;
+  text-align: left;
+  list-style: none;
+  box-shadow: 1px 2px 3px 4px;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.text, .box {
+  line-height: 50px;
+  background: #fff;
+  color: #000;
+  display: none;
+  position: absolute;
+  opacity: 0;
+}
+
+.box2 {
+  line-height: 50px;
+  background: #fff;
+  color: #000;
+  display: none;
+  position: absolute;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

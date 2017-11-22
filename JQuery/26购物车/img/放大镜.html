@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0px;padding:0px;}
+		#small{border:1px solid blue;height:400px;width:400px;float:left;margin-left:50px;position: relative;margin-top:20px;}
+		#big{border:1px solid blue;height:400px;width:400px;float:left;margin-left:50px;overflow:hidden;margin-top:20px;position: relative;}
+		#mark{width:200px;height:200px;background: blue;opacity: 0.5;display: block;position: absolute;left:0px;top:0px;}
+		#big img{position: absolute;}
+	</style>
+</head>
+	<div id='small'>
+		<img src="img/min.jpg" alt="">
+		<p id='mark'></p>
+	</div>
+	<div id='big'>
+		<img src="img/max.jpg" alt="">
+	</div>
+<body>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){
+			$('#small').on('mousemove',function(e){
+				var leftW=e.pageX-$(this).offset().left-$("#mark").width()/2;
+				var topH=e.pageY-$(this).offset().top-$("#mark").height()/2;
+				var maxW=$(this).width()-$("#mark").width();
+				var maxH=$(this).height()-$("#mark").height();
+				if(leftW<0)leftW=0;
+				if(topH<0)topH=0;
+				if(leftW>maxW)leftW=maxW;
+				if(topH>maxH)topH=maxH;
+				$("#mark").css({"left":leftW,"top":topH})
+
+				/*$('#big img')[0].style.left = -leftW*2+"px";
+				$('#big img')[0].style.top = -topH*2+"px"; */
+
+				var bigX=$("#big img").width()/$(this).width()*leftW;
+				var bigY=$("#big img").height()/$(this).height()*topH;
+				$("#big img").css({"margin-left":-bigX,"margin-top":-bigY})
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;}
+		ul li{
+			list-style:none;
+		}
+		#box img{
+			width:200px;
+			height:150px;
+		}
+		.bg{
+			width:400px;
+			height:300px;
+			border: 2px solid #ccc;
+			border:none;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="img/1.jpg" alt="">
+		<img src="img/2.jpg" alt="">
+		<img src="img/3.jpg" alt="">
+		<img src="img/4.jpg" alt="">
+	</div>
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script>
+	$(function(){
+		$("#box img").hover(function(e){
+			var e = e || window.event,
+				start ={
+					x:e.clientX,
+					y:e.clientY
+				};
+			
+			var src = $(this).attr("src");
+			//console.log(src)
+				$("<img class='bg'>").attr("src",src).css({
+					"position":"absolute",
+					"top":start.y+10,
+					"left":start.x+10
+				}).appendTo("body")
+				
+		},function(){
+			$(".bg").remove();
+		})
+	})
+
+
+	</script>
+</body>
+</html>

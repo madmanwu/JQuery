@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>15拉条改变长度</title>
+	<script src="jquery-1.11.3 (1).js"></script>
+	<style>
+		#box{
+			width: 500px;
+			height: 10px;
+			background-color: red;
+			position: relative; 			
+		}
+		#radiobox{
+			width: 30px;
+			height: 30px;
+			border-radius: 15px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: blue;			
+		}
+		#colobox{
+			height: 10px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: blue;
+			margin-top: 8px;
+			margin-left: 1px;			
+		}
+		span{
+			display: inline-block;
+			margin-top: 25px;			
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<div id="radiobox"></div>
+	<div id='colobox'></div>
+	<span>0</span>/100
+	<script>
+		$("#radiobox").mousemove(function(e){
+			var L = e.pageX;			//鼠标距离浏览器的距离
+			var l = $("#box").offset().left;	//id为box的盒子距离父级的距离
+			var left = L-l;			//求出来了  移动的距离
+			var T = e.pageY;
+			var t = $("#box").offset().top;		//与上一样
+			var top = T-t;
+			if(left<0){			//当左边的距离  小于0  就让他等于0  就是不让小圆点 出那个红线的外边			下面的夜一样
+				left = 0;
+			}
+			if(left>500){
+				left=500;
+			}
+			top=0;
+			$(this).css({"left":left,"top":top});		//小圆点的距离 和移动的距离一样   这样就可以移动了
+			$("#colobox").css({"width":left,"top":top});	// 这个是另外的一个盒子  就是当小圆点位移的距离就是他的宽 他就是用来做后边的那个变色的
+			var Leftheight=Math.round(left/5);	//算法是为了求整数 然后的将他的值付给下边
+			/*console.log(Leftheight)*/
+			$("span").html(Leftheight);
+		})
+	</script>
+</body>
+</html>

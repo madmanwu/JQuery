@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+旅游景点:<select name="type" id="localArea"></select><select name="" id="two"></select>
+手机市场:<select name="type" id="ObjectType"></select><select name="" id="two_phone"></select>
+<script src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $.ajax({
+        url:"data.json",
+        type:"get",
+        success:function(data){
+            $("select[name='type']").each(function(i){
+              //console.log($(this).attr("id"))
+                if($(this).attr("id")=="localArea"){
+                    $.each(data.localArea,function(i){
+                        var names=data.localArea[i].name,
+                                options=$("<option>"+names+"</option>")
+                        options.appendTo($("select[id='localArea']"))
+                    })
+                }else if($(this).attr("id")=="ObjectType"){
+                    $.each(data.ObjectType["option"],function(i){
+                        var txt=data.ObjectType["option"][i].text,
+                                options=$("<option>"+txt+"</option>")
+                        options.appendTo($("select[id='ObjectType']"))
+                    })
+                }
+            })
+            $("select[name='type']").on("change",function(){
+                //alert(0)
+                $(this).next().empty()
+                var index=$(this).find("option:selected").index()
+                $.each(data.ObjectType.option[index].option,function(i){
+                    var txts=data.ObjectType.option[index].option[i].text,
+                            opt=$("<option>"+txts+"</option>")
+                    opt.appendTo($("select[id='ObjectType']").next())
+                })
+                $.each(data.localArea[index].option,function(i){
+                    var tts=data.localArea[index].option[i].name,
+                            opta=$("<option>"+tts+"</option>")
+                    opta.appendTo($("select[id='localArea']").next())
+                })
+            })
+        },
+        error:function(){
+           alert(11)
+        }
+    })
+})
+</script>
+</body>
+</html>

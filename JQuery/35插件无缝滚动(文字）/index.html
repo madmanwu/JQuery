@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	#box{width:906px;height:106px;margin:50px auto;border:3px dotted green;}
+	#list li{width:300px;height:100px;text-align: center;line-height: 100px;float:left;}
+	</style>
+</head>
+<body>
+<div id="box">
+	<ul id="list">
+		<li>现在是北京时间</li>
+		<li>2017年5月18日 20:00</li>
+		<li>地址:清徐中学</li>
+		<li>电话:152-0133-2036</li>
+		<li>负责人 : 郑为锋</li>
+		<li>欢迎广大学生或者教师来此咨询，谢谢</li>
+	</ul>
+</div>
+	<script src="jquery1.7.js"></script>
+	<script src="jquery.scroll.js"></script>
+	<script>
+		$(function(){
+			$("#list").start({
+				direction:"top",
+				speed:"100",
+				change:"width"
+			})
+		})
+	</script>
+</body>
+</html>

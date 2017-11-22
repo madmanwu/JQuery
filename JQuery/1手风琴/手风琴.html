@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0 auto;
+			padding: 0;
+		}
+		#box{
+			width: 300px;
+			height: 300px;
+			margin: 50px auto;
+		}
+		#box dl dt{
+			height: 30px;
+			line-height: 30px;
+			color: #FFF;
+			border-bottom: 1px solid #FFF;
+			border-top: 1px solid red;
+			padding:  0 5px;
+			background: blue url(images/bg1.png)right center no-repeat;
+		}
+		#box dl dd{
+			height: 170px;
+			line-height: 24px;
+			padding: 5px;
+			background: #EEE;
+			text-indent: 2em;
+		}
+		#box dl dt.bg{
+			background:#3498DB url(images/bg2.png) right center no-repeat;
+		}
+		#box dl dt.off{
+			background:#3498DB url(images/bg2.png) right center no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<dl>
+			<dt>标题一</dt>
+			<dd>随着农村集体经济越来越集中，集体通过平均分配资源来给予农村居民保障，农民年老没有劳动能力的时候也可以通过集体平均分配获得口粮，体现了集体保障职能。然而这一时期的社会养老并非社会保险意义上的社会养老。</dd>
+		</dl>
+		<dl>
+			<dt>标题二</dt>
+			<dd>1993年，国务院批准民政部成立农村社会保险司，1994年组建了农村社会养老保险管理服务中心，健全了中央级管理机构。农村社会保障进入了发展阶段。</dd>
+		</dl>
+		<dl>
+			<dt>标题三</dt>
+			<dd>在农村只要年满16周岁（不包含在校学生），而且未参加城镇职工基本养老保险的农村居民，均可以在户籍所在地自愿参加新农保。国家为每个新农保参保人建立终身记录的养老保险账户。</dd>
+		</dl>
+		<dl>
+			<dt>标题四</dt>
+			<dd>受传统儒家思想的影响，家庭一直是中国农民的养老保障主体。在家庭养老中，养老服务的提供者是家庭。养儿防老，是中华民族的传统观点，老人年纪大而失去劳动能力之后，由自己的子女和家庭积蓄供养，是我国农村传统的养老方式，也是最常见的养老方式。</dd>
+		</dl>
+	</div>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+	$(function(){
+		$("#box dl>dd").hide(1000);
+		$("#box dl>dt").on("click",function(){
+			$(this).next().toggle(1000);
+			$(this).toggleClass("off");
+		})
+	})
+</script>
+</html>

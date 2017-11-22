@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0px;padding:0px;}
+	#box{width:230px;height:230px;padding:3px;background-color: rgb(196, 210, 224);margin:auto;margin-top:150px;}
+	#top{background: #999999;width:230px;height:60px;}
+
+	#top_1{height:20px;} 
+	#bottom{font-size:24px;font-weight: bold;text-align: right}
+	#bLeft{float:left;width:160px;height:170px;}
+	#bLeft input{width:40px;height:40px;margin:2px 2px 0 0 ;}
+	#bRigth{float:left;width:70px;height:170px;}
+	#bRigth input{width:70px;height:30px;margin:3px 0 0 0;}
+	</style>
+</head>
+<body>
+	<div id="box">
+	<div id="top">	
+		<div id="top_1">
+		<span class="num"></span>
+		<span class="countSize"></span>
+			
+		</div>
+		<div id="bottom">0</div>
+		
+	</div>
+
+	<div id="buttons">
+
+		<div id="bLeft">
+			<input type="button" value="7" class="num1">
+			<input type="button" value="8" class="num1">
+			<input type="button" value="9" class="num1">
+
+			<input type="button" value="4" class="num1">
+			<input type="button" value="5" class="num1">
+			<input type="button" value="6" class="num1">
+
+			<input type="button" value="1" class="num1">
+			<input type="button" value="2" class="num1">
+			<input type="button" value="3" class="num1">
+
+			<input type="button" value="C" class="empty">
+			<input type="button" value="0" class="num1">
+			<input type="button" value="." class="num1">
+		</div>
+
+		<div id="bRigth">
+			<input type="button" value="/" class="upNum">
+			<input type="button" value="*" class="upNum">
+			<input type="button" value="-" class="upNum">
+			<input type="button" value="+" class="upNum">
+			
+			<input type="button" value="=" class="equal">
+		</div>
+
+	</div>
+</div>
+<script src="jquery-1.8.3.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

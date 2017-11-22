@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>选择列表</title>
+        <style>
+            *{margin:0;padding: 0;list-style: none;}
+            .mian_list{margin: 30px 50px;overflow: hidden;}
+            input{outline: none;width: 398px;}
+            .list_city{
+                width: 400px;
+                height: 40px;
+                border:solid 1px green;
+            } 
+            .list_city li{
+                float: left;
+                padding: 0 10px;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                height: 40px;
+
+            }
+            .wrapin_ul{display: none;position: relative;}
+            .conten_view{overflow: hidden;clear: both;width: 400px;overflow: hidden;border:solid 1px green;border-top:none;height: 400px;overflow-y:auto;}
+            .conten_view p{line-height: 35px;padding: 6px 15px;}
+            .conten_view span{cursor: pointer;padding-right: 10px;}
+            .add{
+                position: absolute;
+                border-bottom: solid 3px #86880c;
+                width: 55px;
+                left: 0;
+                top: 39px;
+              }
+
+        </style>
+</head>
+<body>
+
+
+  
+   <div class="mian_list">
+          <input type="text" id="userid">
+          <div class="wrapin_ul">
+             <ul class="list_city">
+                <li>热门</li>
+                <li>ABCD</li>
+                <li>EFGH</li>
+                <li>JKLM</li>
+                <li>NOPQRS</li>
+                <li>TUVWX</li>
+                <li>YZ</li>
+             </ul>
+             <div class="add"></div>
+             <div class="conten_view">
+
+             </div>
+          </div>
+   </div>
+
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/city.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $("#userid").on("focus",function(){
+            $(".wrapin_ul").show();
+            hot();
+        });
+
+        $(".list_city").on("click","li",function(){
+                $(".conten_view").html("");
+                var  add=$(this).parent("ul").next("div");
+                var  ind=$(this).index(),w=add.width();
+                add.stop().animate({'left':ind*w});
+
+                if($(this).text()=="热门"){
+                     hot();
+                    return false;
+                };
+
+                var  list_str=$(this).text(),arr=[];
+                var  arrtext="",content=$(".conten_view");
+                var  cont_in;
+                for(var i=0;i<list_str.length;i++){
+                    
+                    var lhtml="";
+                    arrtext=list_str[i];
+                    cont_in="<h3>"+arrtext+":</h3><p></p>";
+                    div=$("<div></div>");
+                    div.html(cont_in);
+                    content.append(div);
+                    $.each(CITIES,function(i,val){
+                        if(val[1].charAt(0)==arrtext){
+                            lhtml+="<span>"+val[0]+"</span>";
+                        };
+                    });
+                    content.find("p").eq(i).html(lhtml);
+                };
+        });
+
+        function hot(){
+            var  arrh=[];
+            $.each(CITIES,function(i,vall){
+                 arrh.push(vall[0]);
+            });
+            for(var i in arrh){
+              if(i<16){
+                $(".conten_view").append("<span>"+arrh[i]+"</span>");
+              } 
+            };
+        }
+
+
+
+
+
+    }); 
+ 
+</script>
+</body>
+</html>

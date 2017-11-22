@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	#box{position: relative;margin:0 auto;}
+	#box img{position: absolute}
+	</style>
+</head>
+<body>
+	<ul id="box">
+		<li><img src="images/0.jpg" alt=""></li>
+		<li><img src="images/1.jpg" alt=""></li>
+		<li><img src="images/10.jpg" alt=""></li>
+		<li><img src="images/11.jpg" alt=""></li>
+		<li><img src="images/12.jpg" alt=""></li>
+		<li><img src="images/13.jpg" alt=""></li>
+		<li><img src="images/14.jpg" alt=""></li>
+		<li><img src="images/15.jpg" alt=""></li>
+		<li><img src="images/16.jpg" alt=""></li>
+		<li><img src="images/17.jpg" alt=""></li>
+		<li><img src="images/18.jpg" alt=""></li>
+		<li><img src="images/19.jpg" alt=""></li>
+		<li><img src="images/2.jpg" alt=""></li>
+		<li><img src="images/20.jpg" alt=""></li>
+		<li><img src="images/21.jpg" alt=""></li>
+	</ul>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var windowW=$(window).width(),//window的宽度
+				imgW=$("#box img").width()+20,//图片的宽度
+				num=Math.floor(windowW/imgW),//图片的数量
+				arr=[],//定义一个空数组用来存放高度
+				p=0;
+			$("#box").width(imgW*num)//ul的宽度
+			function feng(start,end){
+				for(var i=start;i<end;i++){
+					if(num>i){
+						arr.push(0)
+					}
+					console.log(arr)
+					var imgh=$("#box img").eq(i).height()+20,
+						minh=Math.min.apply(Math,arr),
+						index=$.inArray(minh,arr)
+					//$("#box img").eq(i).stop().animate({"left":imgW*index,"top":minh})
+					$("#box img").eq(i).css({"left":imgW*index,"top":minh})
+					arr[index]+=imgh;
+					p++;
+					/*console.log(p)*/
+				}
+			}
+			feng(0,$("#box img").length)
+			function addimg(){
+				var data={
+					"data":[
+					{"src":"images/0.jpg"},
+					{"src":"images/1.jpg"},
+					{"src":"images/10.jpg"},
+					{"src":"images/11.jpg"},
+					{"src":"images/12.jpg"},
+					{"src":"images/13.jpg"},
+					{"src":"images/14.jpg"},
+					{"src":"images/15.jpg"},
+					{"src":"images/16.jpg"},
+					{"src":"images/17.jpg"},
+					{"src":"images/18.jpg"},
+					{"src":"images/19.jpg"},
+					{"src":"images/2.jpg"},
+					{"src":"images/20.jpg"},
+					{"src":"images/21.jpg"}
+					]
+				}
+				var minh=Math.min.apply(Math,arr),
+					index=$.inArray(minh,arr)
+				feng(p,$("#box img").length)
+				$.each(data.data,function(i,val){
+					var newImg=$("<img src="+val.src+">")
+					newImg.css({"left":imgW*index,"top":minh}).appendTo("#box");	
+				})
+			}
+			$(window).on("scroll",function(){
+				var scrTop=$(this).scrollTop(),
+					top=$(document).height()-$(window).height();
+					if(scrTop>=top){
+						addimg()
+				}
+			})
+			addimg()
+		})
+	</script>
+</body>
+</html>

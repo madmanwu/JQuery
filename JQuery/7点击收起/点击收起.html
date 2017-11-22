@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0 auto;
+			padding: 0;
+			list-style: none;
+		}
+		#box{
+			width: 700px;
+			height: 550px;
+			border: 1px solid #000;
+		}
+		li{
+			width: 220px;
+			height: 160px;
+			float: left;
+			margin-left: 10px;
+			margin-top: 5px;
+		}
+		#box button{
+			margin-top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" >
+		<ul id="list1">
+			<li style="background: pink"></li>
+			<li style="background: skyblue"></li>
+			<li style="background: red"></li>
+		</ul>
+		<ul id="list2">
+			<li style="background: yellow" style="background: yellow"></li>
+			<li style="background: orange"></li>
+			<li style="background: brown"></li>
+		</ul>
+		<ul id="list3">
+			<li style="background: blue"></li>
+			<li style="background: green"></li>
+			<li style="background: #ccc"></li>
+		</ul>
+		<span>其他</span>
+	</div>
+	<button id="btn">收起</button>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+	$(function(){
+		$("#btn").on("click",function(){
+            switch($(this).html()){
+                case "收起":
+                    $("#list3").hide();
+                    $("#btn").text("更多");
+                    
+                    $("#box").css("height","410px");
+                    break;
+                case "更多":
+                    $("#btn").text("收起");
+                    $("#list3").show();
+                    $("#box").css("height","550px");
+                    break;
+            }
+        })
+	})
+</script>
+</html>

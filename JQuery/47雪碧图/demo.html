@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding: 0;list-style-type: none;}
+        #box{width: 500px;height: 600px;margin: 0 auto;position: relative;}
+        #box>p{width: 4px;height: 600px;background: #7a6e6e;float: right;}
+        ul{position: absolute;right: 0;top:50px;width: 200px;}
+        ul li{width: 40px;height: 35px;float: right;margin-bottom: 10px;border-radius: 5px 0  0 5px;overflow: hidden;background:#7a6e6e;clear:both;}
+        ul li p{float: right;width:40px;height: 35px;border-radius: 5px 0  0 5px;line-height: 35px;background: url(bg.png) no-repeat;}
+        ul li span{display: none;float: left;line-height: 35px;padding-left: 5px;color:#fff;}
+        ul .list1{background-position: -85px -175px;}
+        ul .list2{background-position: -45px 0px;}
+        ul .list3{background-position: -185px -98px;}
+        ul .list4{background-position: -45px -45px;}
+        ul .list5{background-position: -45px -100px;}
+        ul .list6{background-position: -185px -148px;}
+        ul .list7{background-position: -45px -150px;}
+        ul .list8{background-position: -85px -143px;}
+        ul .list9{background-position: -185px -200px;}
+        ul .bgColor{background-color: red;}
+    </style>
+</head>
+<body>
+    <div id="box">
+		<p></p>
+		<ul>
+			<li><span>个人信息</span><p class="list1"></p></li>
+			<li><span>购物车</span><p class="list2"></p></li>
+			<li><span>优惠卡卷</span><p class="list3"></p></li>
+			<li><span>我的爱好</span><p class="list4"></p></li>
+			<li><span>优惠时间</span><p class="list5"></p></li>
+			<li><span>回馈信息</span><p class="list6"></p></li>
+			<li><span>精选报价</span><p class="list7"></p></li>
+			<li><span>优惠视频</span><p class="list8"></p></li>
+			<li><span>无限流量</span><p class="list9"></p></li>
+		</ul>
+	</div>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+    $(function(){
+        $("ul li").hover(function(){
+            $(this).addClass("bgColor");
+            $(this).stop().animate({"width":110},function(){
+                $(this).children("span").show();
+            })     
+        },function(){
+        	$(this).children("span").hide(500);
+        	$(this).removeClass("bgColor");
+        	$(this).stop().animate({"width":40},500);
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        #box{
+            background-image:url(images/bg2.png); 
+            width: 730px;
+            height: 248px;
+            margin-top: 50px;
+            position: relative;
+        }
+        #img img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid #666;
+            margin-top:24px;
+            margin-left:24px;
+            float: left
+        }
+        h3{
+            color: #FFF;
+            float: left;
+            margin-left: 29px;
+            margin-top: 24px;
+        }
+        dl{
+            width: 405px;
+            height: 60px;
+            position: absolute;
+            right: 5px;top: 69px;
+            position: relative;
+            margin-right: 0px;
+        }
+        dt img{
+            width: 59px;
+            height:59px;
+            margin-left: -120px;
+            position: absolute;
+            left: 37px;top: 0;
+        }
+        .Music_jd{
+            width: 100%;
+            height: 5px;
+            background: #666;
+            position: absolute;
+            top: 27px;left: 0px;
+        }
+        .btn div{
+            float: left;
+            position: absolute;
+            bottom: 24px;right: 110px;
+        }
+        .prev{
+            margin-right: 190px;
+        }
+        .next{
+            margin-right:130px;
+        }
+        .down{
+            margin-right: 68px;
+        }
+        .del{
+            margin-right: 8px;
+        }
+        .zp{
+            -webkit-animation:zp 8s infinite linear
+        }
+        @-webkit-keyframes zp{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .Music_jd2{
+            width: 0;
+            height: 5px;
+            background:#FFF;
+            position: absolute;
+            top: 27px;left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="img">
+            <img src="images/music1.jpg" alt="" class="pic">
+        </div>
+        <h3>李白--李荣浩</h3>
+        <dl>
+            <dt><img src="images/play.png" alt="" class="play"></dt>
+            <dd>
+                <p class="Music_jd"></p>
+                <p class="Music_jd2"></p>
+            </dd>
+        </dl>
+        <div class="btn">
+            <div class="prev"><img src="images/prev.png" height="51" width="51" alt=""></div>
+            <div class="next"><img src="images/next.png" height="51" width="51" alt=""></div>
+            <div class="down"><img src="images/down.png" height="51" width="51" alt=""></div>
+            <div class="del"><img src="images/del.png" height="51" width="51" alt=""></div>
+        </div>
+    </div>
+    
+    <audio id="action" src="mp3/李白.mp3" controls></audio>
+
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+    $(function(){
+        // 声明一个空数组用来存放图片、歌名、音乐文件
+        var arr1 = [
+            'images/music1.jpg',
+            'images/music2.jpg',
+            'images/music3.jpg',
+            'images/music4.jpg'
+        ];
+        var arr2 = [
+            "李白-李荣浩",
+            "咱们结婚吧-齐晨",
+            "泡沫-邓紫琪",
+            "梦的翅膀受了伤-蒋雪儿"
+        ];
+        var arr3 = [
+            "mp3/李白.mp3",
+            "mp3/咱们结婚吧.mp3",
+            "mp3/泡沫.mp3",
+            "mp3/梦的翅膀受了伤.mp3"    
+        ];
+        
+        // 制定开关
+        var inde = 1,
+            close = 0;
+        
+        // 获取图片索引长度
+        var arr = arr1.length-1;
+//        console.log(arr) 3
+        
+        // 给播放按钮添加点击事件
+        $(".play").on("click",function(){
+            if(close == 0){
+                $(this).attr("src","images/pause.png");
+                $("#action")[0].play();
+                $(".pic").addClass("zp")
+                close = 1
+                
+            }else{
+                $(this).attr("src","images/play.png");
+                $("#action")[0].pause();
+                $(".pic").removeClass("zp")
+                close = 0;
+            }
+            setInterval(jd,1000);
+        })
+        
+        // 获取当前进度
+        function jd(){
+            var currentTime=$("#action")[0].currentTime,
+                totalTime=$("#action")[0].duration,
+                bl=currentTime/totalTime,
+                w=bl*380;
+            $('.Music_jd2').css("width",w);      
+        }
+        
+        // 切换下一首
+        $(".next").on("click",function(){
+            $("#action")[0].muted = true;
+            inde++;
+            if(inde > arr){
+                inde=0;
+            }
+            if(close == 1){
+                autoplay();
+            }else{
+                play();
+            }
+            
+        })
+        
+        // 自动播放
+        function autoplay(){
+            $("#action").attr("src",arr3[inde]);
+            $("h3").text(arr2[inde]);
+            $("#img img").attr("src",arr1[inde]);
+            $("#action")[0].play();
+        }
+        
+        function play(){
+            $("#action").attr("src",arr3[inde]);
+            $("h3").text(arr2[inde]);
+            $("#img img").attr("src",arr1[inde]);
+        }
+        // 切换上一首
+        $(".prev").on("click",function(){
+            $("#action")[0].muted = true;
+            inde--;
+            if(inde == 0){ 
+                inde=arr;
+            }
+            
+            if(close == 1){
+                autoplay();
+            }else{
+                play();
+            }
+        })
+        
+        // 点击删除
+        $(".del").on("click",function(){
+            $("#action").attr("src",arr3[inde]);
+            $("h3").text(arr2[inde]);
+            $("#img img").attr("src",arr1[inde]);
+        })
+        $(".down").on("click",function(){
+            alert("已经保存到本地磁盘！")
+        })
+    })
+</script>
+</html>

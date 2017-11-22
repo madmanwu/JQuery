@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评分</title>
+	<style>
+		*{margin:0;padding:0;}
+		.one,.two{
+			width:500px;
+			margin:50px auto;
+		}
+		.one p:nth-child(1){
+			width:80%; 
+			height:30px;
+			line-height:30px;
+			padding-left: 20px;
+			background:#ccc;
+		}
+		.two p:nth-child(1){
+			width:80%;
+			height:30px;
+			line-height:30px;
+			padding-left: 20px;
+			background:#ccc;
+		}
+		.a{
+			background:url(images/stars2.png);
+		}
+
+	</style>
+</head>
+<script src='js/jq.js'></script>
+<script src='js/star.js'></script>
+<body>
+	<div class='one'>
+		<p>半颗星评分</p>
+		<div class='parent'></div>
+		<p>您的评分：<span class="score"></span>分</p>
+		<div class="think"></div>
+	</div>
+
+	<div class='two'>
+		<p>一颗星评分</p>
+		<div class='parent'></div>
+		<p>您的评分：<span class="score"></span>分</p>
+		<div class="think"></div>
+	</div>
+</body>
+<script>
+	$(function(){
+		$('.one').star();
+		$('.two').star({
+			casen:false,
+			think:[
+				"非常不满意",
+				"不满意",
+				"一般",
+				"没有卖家描述的那么好",
+				"质量不错",
+				"非常满意"
+
+			]
+		});
+	})
+</script>
+</html>

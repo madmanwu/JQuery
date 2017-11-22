@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>选择列表</title>
+        <style>
+            *{margin:0;padding: 0;list-style: none;}
+            .mian_list{margin: 30px 50px;overflow: hidden;}
+            input{outline: none;width: 382px;}
+            .list_city{
+                width: 384px;
+                height: 40px;
+                border:solid 1px green;
+            }
+            .list_city li{
+                float: left; 
+                padding: 0 10px;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                height: 40px;
+
+            }
+            .wrapin_ul{display: none;position: relative;}
+            .conten_view{overflow: hidden;clear: both;width: 382px;overflow: hidden;border:solid 1px green;border-top:none;height: 400px;overflow-y:auto;}
+            .conten_view p{padding: 6px 15px;}
+            .conten_view span{cursor: pointer;padding-right: 10px;line-height: 35px;}
+            .add{
+                position: absolute;
+                border-bottom: solid 3px #86880c;
+                width: 55px;
+                left: 0;
+                top: 39px;
+              }
+
+        </style>
+</head>
+<body>
+
+
+  
+   <div class="mian_list">
+          <input type="text" id="userid">
+          <div class="wrapin_ul">
+             <ul class="list_city">
+                <li>热门</li>
+                <li>ABCD</li>
+                <li>EFGH</li>
+                <li>JKLM</li>
+                <li>NOPQRS</li>
+                <li>TUVWX</li>
+                <li>YZ</li>
+             </ul>
+             <div class="add"></div>
+             <div class="conten_view">
+
+             </div>
+          </div>
+   </div>
+
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/data1.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $("#userid").on("focus",function(){
+            $(".wrapin_ul").show();
+            $(".conten_view").html("");
+            hotlist();
+            newcity();
+        });
+
+        function  hotlist(){
+            $.each(data.hotcitylist,function(i,val){
+                $("<span>"+val.name+"</span>").appendTo(".conten_view");
+            });
+        }
+
+       function  newcity(){
+         $(".list_city").on("click","li",function(){
+                $(".conten_view").html("");
+                var  add=$(this).parent("ul").next("div");
+                var  ind=$(this).index(),w=add.width();
+                add.stop().animate({'left':ind*w});
+
+                var  list_str=$(this).text();
+                var  content=$(".conten_view"),cont_in,div;
+        
+                
+                if(ind==0){
+                    hotlist();
+                }else{
+                  $.each(data.citylist,function(k,val){
+                    var lhtml="";
+                    if(list_str.indexOf(k)!=-1){
+                        div=$("<div></div>");
+                        cont_in="<h3>"+k+"</h3><p></p>";
+                        div.html(cont_in);
+                        content.append(div); 
+                        for(var i in val){
+                            $.each(val[i],function(kk,obj){
+                                lhtml+="<span>"+obj.name+"</span>";
+                                console.log(lhtml)
+                            });
+                        }
+                        content.find("p").append(lhtml);
+                    }  
+                  });
+                }       
+           });
+       }
+    }); 
+ 
+</script>
+</body>
+</html>

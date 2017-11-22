@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding: 0;}
+		#box{
+		 	width:800px;
+		 	height:400px;
+			position: relative;
+		} 
+		.item{
+			width:200px;
+		 	height:400px;
+			transform-style:preserve-3d;
+			transform: rotateX(0deg);
+			position: absolute;
+			transition:all 1s;
+		}
+		.item>div{
+			width:200px;
+			height:400px;
+			position: absolute;
+			background-size: cover;	
+		}
+		.item>div:nth-child(1){
+			background:url(img/1.jpg) no-repeat; 
+			  transform: rotateX(0deg) translateZ(200px); 
+		}
+		.item>div:nth-child(2){
+			background:url(img/2.jpg) no-repeat; 
+			transform: rotateX(-90deg) translateZ(200px);
+		}		
+		.item>div:nth-child(3){
+			background:url(img/3.jpg) no-repeat; 	
+			transform: rotateX(-180deg) translateZ(200px);	
+		}	
+		.item>div:nth-child(4){
+			background:url(img/4.jpg) no-repeat; 
+			transform: rotateX(-270deg) translateZ(200px);		
+		}
+		.prev{
+			width:40px;
+			height:40px;
+			position: absolute;
+			top:170px;
+			left:0;
+			background:pink;
+			color: #fff;
+			border:none;
+		}
+		.next{
+			width:40px;
+			height:40px;
+			position: absolute;
+			top:170px;
+			right:0;
+			background:pink;
+			color:#fff;
+			border:none;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="item">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			
+		</div>
+		<div class="item">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			
+		</div>
+		<div class="item">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		
+		</div>
+		<div class="item">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		
+		</div>
+		<button class="prev"><</button>
+		<button class="next">></button>
+	</div>
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script>
+	$(function(){
+		$('.item').each(function(i,n){
+			$(this).css({
+				'left':i*200,
+				'transitionDelay':i*0.3+'s'
+			}).children('div').css('background-position',-i*200+"px");
+
+		})
+		var timer = null,n=0;
+		$('.prev').on('click',function(){	
+			$('.item').css('transform','rotateX('+(--n*90)+'deg)')
+		})
+		$('.next').on('click',function(){
+			
+			$('.item').css('transform','rotateX('+(++ n*90)+'deg)')
+		})
+		$('#box').hover(function(){
+			clearInterval(timer) 
+		},function(){
+			timer=setInterval(function(){
+				// n++;
+				$('.item').css('transform','rotateX('+(++n*90)+'deg)')
+			},4000)
+
+		}).trigger('mouseleave')
+	})
+
+	</script>
+</body>
+</html>

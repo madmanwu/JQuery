@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #bigbox{
+            width: 980px;
+            position: relative;
+            margin: 30px auto;
+            height: 420px;
+            /*overflow: hidden;*/
+        }
+        #box{
+            position: absolute;
+        }
+        #box img{
+            width: 980px;
+            height: 420px;
+            float: left;
+        }
+        #numb{
+            position: absolute;
+            left: 370px;
+            bottom: 0px;
+        }
+        #numb span{
+            float: left;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #CCC;
+            color: #FFF;
+            margin: 5px;
+            text-align: center;
+            line-height: 30px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        #numb .on{
+            background: #666;
+        }
+        #img{
+            position: absolute;
+            left: 0px;
+            top: 45%;
+            cursor: pointer;
+            z-index: 9;  
+        }
+        #right img{
+            position: absolute;
+            right: 0px;
+            top: 45%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="bigbox">
+        <div id="left"><img src="images/btn_left.png" / id="img"></div>
+        <div id="box">
+            <img src="images/flash1.jpg">
+            <img src="images/flash2.jpg">
+            <img src="images/flash3.jpg">
+            <img src="images/flash4.jpg">
+            <img src="images/flash5.jpg">
+            <img src="images/flash6.jpg">
+            <img src="images/flash1.jpg">
+        </div>
+        <div id="right"><img src="images/btn_right.png" /></div>
+        <div id="numb">
+            <span class="on">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+        </div>
+    </div>
+</body>
+<script src="js/jquery1.7.js"></script>
+<script>
+    $(function(){
+        // 获取单张图片的宽度
+        var w = $("#box img").eq(0).width();
+//        console.log(w) // 980px
+        
+        // 获取整个大盒子的宽度
+        $("#box").width($("#box img").length*w);
+//        console.log($("#box").width()) // 6860px
+        
+        var num = 0;
+        
+        // 自动轮播
+        timer = setInterval(right,2000);
+        
+        // 右运动
+        function right(){
+            if(num >= $("#box img").length-1){
+                $("#box").css("margin-left",0);
+                num = 0;
+            }
+            num++;
+            inde(num);
+            sport(num);
+        }
+        // 左运动
+        function left(){
+            if(num == 0){
+                $("#box").css("margin-left",-($("#box img").length-1)*w);
+                num = $("#box img").length-1;
+            }
+            num--;
+            inde(num);
+            sport(num);
+        }
+        
+        // 鼠标悬停
+        $("#bigbox").hover(function(){
+            clearInterval(timer);
+        },function(){
+            timer = setInterval(right,1500);
+        });
+        
+        // 添加右按钮的点击事件
+        $("#right").on("click",function(){
+            right();
+        })
+        // 添加左按钮的点击事件
+        $("#left").on("click",function(){
+            left();
+        })
+        
+        // 运动
+        function sport(nums){
+            $("#box").stop().animate({"margin-left":-w*(nums)},2000);
+        }
+        
+        // 索引
+        function inde(n){
+            if(n == $("#box img").length-1){
+                n=0;
+            }
+            $("#numb span").eq(n).addClass("on").siblings().removeClass("on");
+        }
+        
+        // 鼠标滑过索引
+        $("#numb").on("mouseover","span",function(){
+            num = $(this).index();
+            inde(num);
+            sport(num);
+        })
+    })
+</script>
+</html>

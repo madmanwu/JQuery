@@ -1,0 +1,26 @@
+*{margin:0;padding:0;list-style: none}
+
+
+.box{
+	height: 300px;
+	width:470px;
+	margin: 40px auto;
+	border:1px solid #ccc;
+	padding: 0 30px;
+}
+.box .star{
+	height: 21px;
+	width: 160px;
+	margin: 20px 0;
+	background-image: url(../images/stark2.png);
+	cursor:pointer;
+}
+.box .star p{
+	background-image: url(../images/stars2.png);
+	height: 100%;
+	width: 100%;
+}
+
+
+
+

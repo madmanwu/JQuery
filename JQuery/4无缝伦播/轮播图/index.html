@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        #box{
+            width: 980px;
+            height: 420px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        #pic{
+            position: absolute;
+        }
+        #pic img{
+            float: left;
+            width: 980px;
+            height: 420px;
+        }
+        .left img{
+            position: absolute;
+            left: 0;top: 45%;
+            background: #f00;
+        }
+        .right img{
+            position: absolute;
+            right: 0;top: 45%;
+            background: #f00;
+        }
+        #list{
+            position: absolute;
+            bottom: 0;left: 310px;
+        }
+        #list span{
+            display: block;
+            float: left;
+            line-height: 30px;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            opacity: 0.8;
+            background: #ccc;
+            margin: 0 9px;
+        }
+        #list .on{
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="pic">
+            <img src="images/flash1.jpg" alt="">
+            <img src="images/flash2.jpg" alt="">
+            <img src="images/flash3.jpg" alt="">
+            <img src="images/flash4.jpg" alt="">
+            <img src="images/flash5.jpg" alt="">
+            <img src="images/flash6.jpg" alt="">
+            <img src="images/flash1.jpg" alt="">
+        </div>
+        <div class="left"><img src="images/btn_left.png" alt=""></div>
+        <div class="right"><img src="images/btn_right.png" alt=""></div>
+        <div id="list">
+           <span class="on">1</span>
+           <span>2</span>
+           <span>3</span>
+           <span>4</span>
+           <span>5</span>
+           <span>6</span> 
+        </div>
+    </div>
+</body>
+<script src="js/jquery1.7.js"></script>
+<script>
+    $(function(){
+        // 获取一张图片的宽度
+        var w = $("#pic img").eq(0).width();
+//        console.log(w) // 980px
+        
+        // 获取图片外面盒子的宽度
+        $("#pic").width($("#pic img").length*w);
+//        console.log($("#pic").width()); // 6860px
+        
+        var num = 0;
+        
+        // 自动播放
+        timer = setInterval(right,2000);
+        
+        // 向右运动
+        function right(){
+            if(num >= $("pic img").length-1){
+                $("#pic").css("margin-left",0);
+                num = 0;
+            }
+            num++;
+            inde(num);
+            sport(num);
+        }
+        
+        // 向左运动
+        function left(){
+            if(num == 0){
+                $("#pic").css("margin-left",-($("#pic img").length-1)*w);
+                num = $("#pic img").length-1;
+            }
+            num--;
+            inde(num);
+            sport(num);
+        }
+        
+        // 鼠标悬停
+        $("#box").hover(function(){
+           clearInterval(timer); 
+        },function(){
+            timer = setInterval(right,2000);
+        })
+        
+        // 添加右按钮的点击事件
+        $(".right").on("click",function(){
+            right();
+        })
+        
+        // 添加左按钮的点击事件
+        $(".left").on("click",function(){
+            left();
+        })
+        
+        // 运动
+        function sport(nums){
+            $("#pic").stop().animate({"margin-left":-w*(nums)},2000);
+        }
+        
+        // 索引
+        function inde(n){
+            if(n == $("#pic img").length-1){
+                n = 0;
+            }
+            $("#list span").eq(n).addClass("on").siblings().removeClass("on");
+        }
+        
+        // 鼠标点击索引
+        $("#list").on("click","span",function(){
+            num = this.index();
+            inde(num);
+            sport(num);
+        })
+    })
+</script>
+</html>

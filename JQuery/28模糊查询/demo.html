@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="ips">
+	<ul id="list"></ul>
+	<button id="btn">点击</button>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var data={
+				"name":["张三","三小","王五","王二小","放牛","李四","李四儿"]
+			}
+			$("#btn").click(function(){
+				var vals=$("#ips").val(),
+					str=""
+				$.each(data.name,function(i,val){
+					$("#ips").filter(":contains(+vals+)")
+					var str="<li>"+val[i]+"</li>"
+					console.log(str)
+				})
+				$("#list").html(str)
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+*{
+	margin: 0;padding:0;list-style: none;
+}
+
+.box{
+	height: 300px;
+	width: 700px;
+	border:1px solid #ccc;
+	border-top: 0;
+	margin:40px auto;
+}
+.box .h4{
+	height: 40px;
+	line-height: 40px;
+	text-indent: 20px;
+	font-size:14px;
+	font-weight: 900;
+	color:#fff;
+	background-color:cadetblue;
+}
+
+.box .h4 span{
+	float:right;
+	display:block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	text-indent:0;
+	font-size:20px;
+	background-color:brown;
+	cursor: pointer;
+}
+
+.box p{
+	margin:100px 0 0 20%;
+	height: 10px;	
+	width: 400px;
+	background-color:#f0f0f0;
+	box-shadow:0 2px 20px #fff inset;	
+	border-radius: 3px;
+	position: relative;
+	
+}
+.box p span{
+	height: 25px;
+	width: 25px;
+	display: block;
+	background-color:darkorange;
+	border-radius:50%;
+	position: absolute;
+	left:0;
+	top:-8px;
+	cursor: pointer;
+}
+.box p label{
+	height: 10px;
+	width: 0;
+	background-color:chartreuse;
+	box-shadow:0 2px 40px #fff inset;	
+	border-radius: 3px;
+	display: block;
+}
+.box>b{
+	display: block;
+	margin:20px 0 0 160px;
+	font-weight: 400;
+	font-size: 16px;
+	color:cadetblue;
+}
+#imgs{width:0;height:0;overflow: hidden;}
+
+

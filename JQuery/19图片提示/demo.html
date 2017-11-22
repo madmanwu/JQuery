@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            width: 390px;
+            height: 270px;
+            float: left;
+        }
+        #box{
+            width: 1170px;
+            height: 540px;
+            border: 1px solid #000;
+        }
+        .ind{
+            width:420px;
+            height: 300px;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        .ind img{
+            width: 420px;
+        }
+        .ind h1{
+            margin: 0;
+            padding: 0;
+            line-height: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li><a href="1.jpg" title="图片1"><img src="1.jpg" alt=""></a></li>
+            <li><a href="2.jpg" title="图片2"><img src="2.jpg" alt=""></a></li>
+            <li><a href="3.jpg" title="图片3"><img src="3.jpg" alt=""></a></li>
+            <li><a href="4.jpg" title="图片4"><img src="4.jpg" alt=""></a></li>
+            <li><a href="5.jpg" title="图片5"><img src="5.jpg" alt=""></a></li>
+            <li><a href="6.jpg" title="图片6"><img src="6.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+    $(function(){
+        $("li a").on("mouseenter",function(e){
+            var src = $(this).attr("href")
+                tit = $(this).attr("title");
+            $("<div class='ind'><img src='"+src+"'/><h1>"+tit+"</h1></div>").appendTo("body");
+            
+            $(".ind").css({
+                "position":"absolute",
+                "left":e.pageX+10,
+                "top":e.pageY+10
+            });
+        }).on("mousemove",function(e){
+            $(".ind").css({
+                "position":"absolate",
+                "left":e.pageX+10,
+                "top":e.pageY+10
+            });
+        }).on("mouseleave",function(){
+            $(".ind").remove();
+        })
+    })
+</script>
+</html>

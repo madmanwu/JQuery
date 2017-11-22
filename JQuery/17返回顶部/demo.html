@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        p{
+            width: 80px;
+            height: 30px;
+            border: 1px solid #000;
+            position: fixed;
+            bottom: 10px;
+            right: 0px;
+            background: #666;
+            line-height: 30px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="top.png" alt="">
+    <p>返回顶部</p>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+    $(function(){
+        $(window).scroll(function(){
+            var h = $(window).height();
+//            console.log(h)
+            var top = $(window).scrollTop();
+//            console.log(top)
+            if(top > h){
+                $("p").show();
+            }else{
+                $("p").hide();
+            }
+        })
+        // 添加点击事件
+        $("p").on("click",function(){
+            $(document.body).animate({"scrollTop":0},500);
+            $(document.documentElement).animate({"scrollTop":0},500);
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;list-style: none}
+	#box{width:100px;height:100px;background:pink;position: absolute;left:0;top:0;}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){
+			//标鼠位置
+			$(document).on("mousemove",function(e){
+				var w=e.pageX-$("#box").width()/2,
+					t=e.pageY-$("#box").height()/2,
+					box_w=$(window).width()-$("#box").width() ,
+					box_h=$(window).height()-$("#box").height()
+				if(w<0){
+					w=0
+				}else if(w>box_w){
+					w=box_w
+				}
+				if(t<0){
+					t=0
+				}else if(t>box_h){
+					t=box_h
+				}
+				$("#box").css({"left":w,"top":t})//盒子移动的相对位置
+
+			})
+		})
+	</script>
+</body>
+</html>

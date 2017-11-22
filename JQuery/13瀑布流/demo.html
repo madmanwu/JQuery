@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #wrap{
+            position: relative;
+            margin: 0 auto;
+        }
+        #wrap img{
+            position: absolute;
+            width: 310px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <img src="images/hell(1).png" alt="">
+        <img src="images/hell(2).png" alt="">
+        <img src="images/hell(3).png" alt="">
+        <img src="images/hell(4).png" alt="">
+        <img src="images/hell(5).png" alt="">
+    </div>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+    $(function(){
+        var imgs={"images":[
+            {"src":"images/temp_img01.jpg"},{"src":"images/temp_img02.jpg"},{"src":"images/temp_img03.jpg"},{"src":"images/temp_img04.jpg"},{"src":"images/temp_img05.jpg"},{"src":"images/temp_img06.jpg"},{"src":"images/temp_img01.jpg"},{"src":"images/temp_img02.jpg"},{"src":"images/temp_img03.jpg"},{"src":"images/temp_img04.jpg"},{"src":"images/temp_img05.jpg"},{"src":"images/temp_img06.jpg"}
+            ]
+        }
+        function water(){
+            var arr=[];
+            imgw=$("#wrap img").width()+20;
+            coln=Math.floor($(window).width()/imgw);
+            for (var i = 0; i < $("#wrap img").length; i++) {
+                imgh=$("#wrap img").eq(i).height()+20;
+                if (i<coln) {
+                    arr.push(0);
+                }
+                minh=Math.min.apply(Math,arr);
+                minidx=$.inArray(minh,arr);
+                maxh=Math.max.apply(Math,arr);
+                maxidx=$.inArray(maxh,arr);
+                //console.log(arr)
+                $("#wrap img").eq(i).stop().animate({left:minidx*imgw,top:minh},1000);
+                arr[minidx]+=imgh;
+            }
+        }
+        water();
+        function creatImg(){
+            for (var i = 0; i < imgs.images.length; i++) {
+                $("<img src='#'>").appendTo($("#wrap")).attr("src",imgs.images[i].src).css({left:maxidx*imgw,top:minh})
+            }
+            water();
+        }
+        $(window).on("scroll",function(){
+            //lasth=$("#wrap img:last").height()+20;
+            //lastt=$("#wrap img:last").prev().offset().top-lasth;
+            console.log($(document).height());
+            console.log($(window).height());
+            if ($(this).scrollTop()>($(document).height()-$(window).height()*2)){
+                creatImg();
+            }
+        })
+    })
+</script>
+</html>

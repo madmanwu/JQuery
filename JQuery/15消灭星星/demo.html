@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 150px;
+            height: 350px;
+            border: 1px solid #000;
+            float: left;
+        }
+        ul li{
+            list-style: none;
+            margin-top: 11px;
+            margin-left: -13px;
+            
+        }
+        #box1{
+            width: 150px;
+            height: 350px;
+            border: 1px solid #000;
+            float: left;
+        }
+        #list li{
+            list-style: none;
+            margin-top: 11px;
+            margin-left: -13px;
+        }
+        button{
+            float: left;
+            margin-top: 150px;
+            margin-left: 11px;
+            margin-right: 11px;
+            outline: none;
+            width: 43px;
+            height: 33px;
+            background: pink;
+            color: #FFF;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li><input type="checkbox" value="1">消灭星星1</li>
+			<li><input type="checkbox" value="2">消灭星星2</li>
+			<li><input type="checkbox" value="3">消灭星星3</li>
+			<li><input type="checkbox" value="4">消灭星星4</li>
+			<li><input type="checkbox" value="5">消灭星星5</li>
+			<li><input type="checkbox" value="6">消灭星星6</li>
+			<li><input type="checkbox" value="7">消灭星星7</li>
+			<li><input type="checkbox" value="8">消灭星星8</li>
+			<li><input type="checkbox" value="9">消灭星星9</li>
+			<li><input type="checkbox" value="10">消灭星星10</li>
+			<li><input type="checkbox" value="11">消灭星星11</li>
+        </ul>
+    </div>
+    <button id="add">添加</button>
+    <button id="del">删除</button>
+    <div id="box1">
+        <ul id="list"></ul>
+    </div>
+</body>
+<script src="jquery1.7.js"></script>
+<script>
+    $(function(){
+        var arr = [];
+        $("#add").on("click",function(){
+            var chec = $("#box ul>li").find(":checked");
+            if(chec.length == 0){
+                return false;
+            }
+            
+            $.each(chec,function(){
+                var vl = $(this).val();
+                var txt = $(this).parent().text();
+                var cont="<li><input type='checkbox' value="+vl+">"+txt+"</li>";
+                if(arr.indexOf(vl) == -1){
+                    arr.push(vl);
+                    $("#box1 #list").append(cont);
+                }
+            })
+        });
+
+        $("#del").on("click",function(){
+            var che = $("#list>li").find(":checked");
+            if(che.length == -1){
+                return false;
+            }
+          
+            $.each(che,function(){
+                var vls = $(this).val();
+                $(this).parent().remove();
+                var num = arr.indexOf(vls);
+                arr.splice(num,1);
+                
+            })
+        })
+    })
+</script>
+</html>

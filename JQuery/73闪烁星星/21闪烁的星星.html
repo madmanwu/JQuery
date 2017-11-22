@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>21闪烁的星星</title>
+	<script src="jquery-1.11.3 (1).js"></script>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		html,body{
+			width: 100%; 
+			height: 100%;
+		}
+		#box{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: #000;
+		}
+		#box span{
+			width: 13px;
+			height: 13px;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		$(function(){
+			var num=50;
+			for(var i=1;i<num;i++){
+				var x=Math.random()*$("#box").innerWidth()+"px";
+				var y=Math.random()*$("#box").innerHeight()+"px";
+				$("#box").append("<span style='left:"+x+";top:"+y+"'></span>");
+				two();
+			}
+
+			function one(){
+				$("#box span").animate({"opacity":1},100,function(){
+					$(this).css({"background":createColor()});
+				})
+			}
+
+			function two(){
+				$("#box span").animate({opacity:0},200,function(){
+					$(this).css({"background":createColor()});
+					one();
+				})
+			}
+
+			function createColor(){
+				var num="0123456789abcde";
+				var col="#";
+				for(var i=0;i<6;i++){
+					col+=num[Math.floor(Math.random()*15)];
+				}
+				return col;
+			}
+		})
+	</script>
+</body>
+</html>

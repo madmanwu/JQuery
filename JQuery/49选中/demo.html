@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.bg{
+			background: limegreen;
+		}
+		.bg2{
+			background: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><input type="checkbox"></td>
+			<td>111</td>
+			<td>111</td>
+			<td>111</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox"></td>
+			<td>222</td>
+			<td>222</td>
+			<td>222</td>
+
+		</tr>
+		<tr>
+			<td><input type="checkbox"></td>
+			<td>333</td>
+			<td>333</td>
+			<td>333</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox"></td>
+			<td>444</td>
+			<td>444</td>
+			<td>444</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox"></td>
+			<td>555</td>
+			<td>555</td>
+			<td>555</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox"></td>
+			<td>666</td>
+			<td>666</td> 
+			<td>666</td>
+		</tr>
+	</table>
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script>
+	$(function(){
+		$(":checkbox").on("click",function(){
+			var ind = $(this).parents("tr").index();
+			if($(this).prop("checked")){
+				if(ind%2==0){
+					$(this).parents("tr").addClass("bg");
+				}else{
+					$(this).parents("tr").addClass("bg2");
+				}			
+			}else{
+				$(this).parents("tr").removeClass()
+			}
+		})
+	})
+
+	</script>
+</body>
+</html>

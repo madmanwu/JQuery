@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		#box{
+			width:170px;
+			height:auto;
+			border:1px solid #ccc;
+			margin-left: 30px;
+			display: none; 
+			position:absolute;
+			background: #fff;
+		}
+		.bg{background: #eee;}
+	</style>
+</head>
+<body>
+	<label for="">邮箱<input type="text">
+		<div id="box"></div>
+	</label><br><br>
+	<label for="">账号<input type="text"></label><br><br>
+	<label for="">密码<input type="password"></label><br><br>
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script>
+	$(function(){
+		var arr = ['@126.com','@163.com','@qq.com','@139.com'];
+		$(':text').on('keyup',function(){
+			// alert(222)
+			var brr =[];
+			var val = $(':text').val();
+			//console.log(val)
+			$.each(arr,function(i,n){
+				// console.log(n)
+				brr.push('<p>'+val+n+'</p>')
+			})
+			$('#box').show().html(brr.join(' '))
+
+		})
+		$('#box').on('mouseover','p',function(){
+			$(this).addClass('bg').siblings().removeClass('bg');
+		}).on('click','p',function(){
+			$(':text').first().val($(this).text());
+			$('#box').hide();
+		})
+	})
+
+	</script>
+</body>
+</html>

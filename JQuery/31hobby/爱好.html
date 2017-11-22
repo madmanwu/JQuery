@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		 <div class="options">
+		 	<ul id="items">
+		 		<li>音乐</li>
+		 		<li>美术</li>
+		 		<li>体育</li>
+		 		<li>游戏</li>
+		 		<li>旅游</li>
+		 		<li>跑步</li>
+		 		<li>爬山</li>
+		 		<li>探险</li>
+		 	</ul>
+		 </div>
+		 <div class="button-info">
+		 	<div class="button">
+		 		<p>
+		 			<input type="text" id="aihao" placeholder="请输入需要添加的标签" >
+		 		</p>
+		 		<span id="add">添加爱好</span>
+		 	</div>
+		 	<div class="tip">最多只能选择三项</div>
+		 </div>
+		 <div class="result">
+		 	<ul id="selected"></ul>
+		 </div>
+	</div>
+
+	<script src="jquery1.7.js"></script>
+	<script>
+		$(function(){
+			$("#items li").on("click",function(){
+				if($("#selected li").length<3){
+					$(this).addClass("select");
+					var txt=$(this).text();
+					crearLi(txt)
+					$(".tip").hide();
+				}
+				else{
+					$(".tip").show();
+					return false;
+				}
+			})
+			function crearLi(con){
+				var str="<li>"+con+"<span></span></li>";
+				$(str).appendTo("#selected")
+			}
+
+			$("#add").on("click",function(){
+				if($("#selected li").length<3){
+					var txt=$("#aihao").val();
+					crearLi(txt);
+					$(".tip").hide();
+				}else{
+					$(".tip").show();
+					return false;
+				}
+				$("#aihao").val("");
+			})
+
+			$("#selected").on("click","span",function(){
+				$(this).parent().remove();
+				var tex=$(this).parent().text();
+				$("#items li:contains("+tex+")").removeClass("select");
+			})
+		})
+	</script>
+</body>
+</html>

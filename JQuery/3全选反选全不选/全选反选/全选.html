@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		<label for=""><input type="checkbox">苹果</label><br>
+		<label for=""><input type="checkbox">香蕉</label><br>
+		<label for=""><input type="checkbox">西瓜</label><br>
+		<label for=""><input type="checkbox">草莓</label><br>
+		<label for=""><input type="checkbox">葡萄</label><br>
+		<label for=""><input type="checkbox">荔枝</label><br>
+		<label for=""><input type="checkbox">提子</label><br>
+		<label for=""><input type="checkbox">桂圆</label>	
+		
+	</div>
+		<button id="all">全选</button>
+		<button id="none">全不选</button>
+		<button id="fx">反选</button>
+		<script src="jquery1.7.js"></script>
+		<script>
+			$(function(){
+				$("#all").on("click",function(){
+					$(":checkbox").prop("checked",true)
+				})
+
+				$("#none").on("click",function(){
+					$(":checkbox").prop("checked",false)
+				})
+
+				$("#fx").on("click",function(){
+					$(":checkbox").each(function(){
+						if($(this).prop("checked")){
+							$(this).prop("checked",false)
+						}else{
+							$(this).prop("checked",true)
+						}
+					})
+				/*(":checkbox").each(function(){
+					$(this).prop("checked",!$(this).prop("checked"))
+				})*/
+				})
+			})
+		</script>
+</body>
+</html>

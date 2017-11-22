@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;list-style: none}
+        #box{width:200px;height:210px;border:1px solid #000;margin:40px auto}
+        #title{width:200px;height:30px;display:flex}
+        #title li{flex:1;text-align: center;line-height: 30px}
+        #ips{margin:20px auto}
+        #list{width:200px;height:180px;}
+        #list li{width:200px;height:30px;display:flex}
+        #list li span{flex:1;border:1px solid greenyellow;text-align: center;line-height: 30px;cursor: pointer}
+    </style>
+</head>
+<body>
+<input type="text" id="ips">
+<button id="btn1">上个月</button>
+<button id="btn2">下个月</button>
+<div id="box">
+    <ol id="title">
+        <li>日</li>
+        <li>一</li>
+        <li>二</li>
+        <li>三</li>
+        <li>四</li>
+        <li>五</li>
+        <li>六</li>
+    </ol>
+    <ul id="list">
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+        <li>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+var date=new Date(),
+        year=date.getFullYear(),
+        month=date.getMonth()
+    $("#ips").val(year+"-"+(month+1))
+    function time(year,month){
+        //获取当前月的天数
+        var currentDays=new Date(year,month+1,0).getDate()
+        console.log(currentDays)
+        //获取上个月的天数
+        var lastDays=new Date(year,month,0).getDate()
+        console.log(lastDays)
+        //获取当前月第一天是星期几
+        var currentFirstWeek=new Date(year,month,1).getDay()
+        console.log(currentFirstWeek)
+        $("span").each(function(i){
+            $(this).css({"color":"#000"})
+            if(i<currentFirstWeek){
+                //求得是上个月的后几天
+                $(this).text(lastDays-currentFirstWeek+i+1)
+                //内容是  上个月的天数 - 本月第一天的星期数 + 下标 + 1
+                $(this).css({"color":"#ccc"})
+            }
+            if(i>=currentFirstWeek){
+                //本月的天数的排列
+                $(this).text(i-currentFirstWeek+1)
+                //内容是  下标 - 本月第一天的星期数 + 1
+            }
+            if(i>=currentDays+currentFirstWeek){
+                //下个月天数的排列
+                $(this).text(i-currentDays-currentFirstWeek+1)
+                //内容是  下标 - 当前月的天数 - 本月第一天的星期数 + 1
+                $(this).css({"color":"#ccc"})
+            }
+        })
+    }
+    time(year,month)
+    $("#btn1").on("click",function(){
+        if(month==0){
+            month=12
+            year--;
+        }
+        month--
+        time(year,month)
+        $("#ips").val(year+"-"+(month+1))
+    })
+    $("#btn2").on("click",function(){
+        if(month==11){
+            month=-1
+            year++;
+        }
+        month++
+        time(year,month)
+        $("#ips").val(year+"-"+(month+1))
+    })
+})
+</script>
+</body>
+</html>

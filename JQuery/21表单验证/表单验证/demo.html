@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;}
+	p{width:100px;height:40px;border:1px solid red;}
+	</style>
+</head>
+<body>
+	<p></p>
+	<button id="btn">换一张</button>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){
+			var arr=["a","b","c","d","e","f"]
+			$("#btn").on("click",function(){
+				var brr=[],str=""
+				for(var i=0;i<4;i++){
+					random=Math.floor(Math.random()*6)
+					if(brr.indexOf(arr)==-1){
+						brr.push(arr[random])
+						str=brr.join("")
+					}	
+				}
+				$("p").text(str)
+			})
+		})
+	</script>
+</body>
+</html>

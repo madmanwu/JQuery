@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;}
+		ul li{list-style: none;}
+
+		#box img{
+			width:250px;
+			height:180px;
+			position: relative;
+		}
+		.bg{
+			width:500px;
+			height:360px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="img/1.jpg" alt="">
+		<img src="img/2.jpg" alt="">
+		<img src="img/3.jpg" alt="">
+		<img src="img/4.jpg" alt="">
+	</div>
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script>
+	//首先是img的滑过事件
+	//获取鼠标位置
+	//滑过的时候创建一个img，设置class名，把当前的路径设置进去，设置定位和值，把当前显示，其他隐藏
+	$(function(){
+		$("#box img").hover(function(e){
+			var e = e || window.event;
+			var x = e.clientX,y=e.clientY;
+			var src = $(this).attr("src");
+			//console.log(x+"==>"+y)
+			$("<img class='bg'>").attr("src",src).css({
+				"position":"absolute",
+				"top":y+10,
+				"left":x+10
+			}).appendTo("body")//=======>>一定要记得把创建的img放到body中;
+		},function(){
+			$(".bg").remove()
+		})
+	});
+	</script>
+</body>
+</html>
